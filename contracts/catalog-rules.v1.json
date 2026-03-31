@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "catalog-rules-v1",
+  "include": {
+    "requiresAnySubclassAccess": true
+  },
+  "exclude": {
+    "weaponTypes": [
+      "Carryable",
+      "Prop",
+      "Champion Weapon"
+    ],
+    "weaponNames": [
+      "Fists"
+    ]
+  }
+}

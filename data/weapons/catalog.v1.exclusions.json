@@ -1,0 +1,38 @@
+{
+  "excluded": [
+    {
+      "weaponKey": "longsword__argon__citadel",
+      "name": "Argon's Sword",
+      "reasons": [
+        "Weapon type is excluded from V1: Champion Weapon."
+      ]
+    },
+    {
+      "weaponKey": "carryable__candelabra",
+      "name": "Candelabra",
+      "reasons": [
+        "Weapon must belong to at least one subclass.",
+        "Weapon type is excluded from V1: Carryable, Prop."
+      ]
+    },
+    {
+      "weaponKey": "fists",
+      "name": "Fists",
+      "reasons": [
+        "Weapon name \"Fists\" is excluded from V1."
+      ]
+    },
+    {
+      "weaponKey": "greatsword__malric",
+      "name": "Lion's Bane",
+      "reasons": [
+        "Weapon type is excluded from V1: Champion Weapon."
+      ]
+    }
+  ],
+  "excludedCount": 4,
+  "generatedAt": "2026-03-31T19:51:35.553Z",
+  "includedCount": 40,
+  "mappingVersion": "weapon-v1-mapping",
+  "sourceVersion": "1.0.6"
+}

@@ -3,6 +3,7 @@
 ## 1. Purpose
 
 This file is the strategic source of truth for the project.
+Canonical path: `docs/MASTER_PLAN.md`.
 
 It is used to:
 - preserve project context across sessions;
@@ -125,6 +126,18 @@ Key implications:
 - the front end should depend on normalized product data, not raw library objects;
 - future migration to a database should preserve that normalized contract.
 
+### Contract Role Beyond The Current Source
+
+The normalized contract is not tied to file-based source ingestion.
+
+It should continue to act as the product-facing boundary even after a move to database-backed data.
+
+That means:
+- the database is a storage and maintenance layer, not the product contract itself;
+- front-end consumers should still depend on normalized product-facing weapon data;
+- migration to a database should preserve the same contract whenever possible;
+- ingestion, validation, and projection logic may change over time, but the product-facing contract should remain intentionally stable.
+
 ## 6. Product Model For V1
 
 ### Core Surfaces
@@ -194,7 +207,6 @@ For each core attack expose:
 Optional attack groups when present:
 - `special`;
 - `sprintAttack`;
-- `sprintCharge`;
 - `throw`.
 
 For optional attacks expose only:
@@ -259,6 +271,9 @@ The normalized model is stable enough for front-end implementation.
 
 Master plan checkpoint:
 Return to this file when the normalized model is validated, then mark the stage complete and decide the next implementation plan.
+
+Status:
+The normalized contract, catalog rules, source-to-product mapping, and generated V1 catalog are now stable enough to support front-end implementation.
 
 ### Stage 3. V1 Reference Experience
 
@@ -420,6 +435,9 @@ Validated decisions:
 - comparison happens in-place, not on a separate page;
 - subclass access is the primary availability signal in the UI;
 - the project uses a normalized internal product model instead of the raw library schema;
+- the normalized weapon contract acts as the source of truth for product-facing weapon data, and TypeScript types should be derived from that contract rather than duplicated by hand;
+- generated normalized datasets are useful development and validation artifacts now, and may later serve as snapshots, fixtures, regression references, or export projections even after the project adopts a database;
+- the current catalog build script is the first form of the ingestion pipeline and may later evolve into a database import, sync, or validation script rather than being discarded;
 - homepage summary metrics stay simplified and are derived from core attack data.
 
 ## 12. Progress and Next Planning Candidates
@@ -427,31 +445,31 @@ Validated decisions:
 ### Stage Progress
 
 - Stage 1. Strategic framing: complete enough to proceed
-- Stage 2. Source normalization and product contract: next
-- Stage 3. V1 reference experience: pending
+- Stage 2. Source normalization and product contract: complete enough to proceed
+- Stage 3. V1 reference experience: next
 - Stage 4. Public deployment and validation: pending
 - Stage 5. Data management evolution: pending
 - Stage 6. Expansion: pending
 
 ### Next Planning Candidates
 
-- normalized weapon schema;
-- V1 catalog normalization rules;
 - front-end component architecture for simple/detailed/comparison modes.
+- main page information architecture and browsing flow.
+- comparison-mode interaction design on top of the normalized model.
 
 ## 13. Session Reset Summary
 
 ### Current State
 
-The strategic foundation is in place. The source library has been audited at a high level. The next real implementation work is to formalize the normalized weapon model and V1 catalog contract.
+The strategic foundation is in place. Stage 2 has produced a stable normalized weapon contract, a curated V1 catalog, and an executable ingestion path that generates product-facing data from the current source library.
 
 ### Current Focus
 
-Move from strategy into Stage 2 by defining the normalized product-facing weapon model.
+Move into Stage 3 by designing and implementing the first usable front-end reference experience on top of the normalized V1 weapon catalog.
 
 ### Next High-Level Question
 
-What exact normalized schema should the project use to map source-library weapon data into simple, detailed, and comparison-ready front-end data?
+What front-end architecture should power the simple view, detailed view, filtering, sorting, and in-place comparison on top of the normalized catalog?
 
 ### Last Updated
 

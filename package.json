@@ -1,0 +1,19 @@
+{
+  "name": "chivalry",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:weapons": "tsx scripts/build-weapons-catalog.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ajv": "^8.18.0",
+    "json-schema-to-ts": "^3.1.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chivalry2-weapons": "^1.0.6"
+  }
+}

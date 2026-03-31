@@ -1,0 +1,3645 @@
+[
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "axe",
+    "slug": "axe",
+    "name": "Axe",
+    "aliases": [],
+    "subclassAccess": [
+      "Crossbowman",
+      "Crusader",
+      "Guardian",
+      "Man at Arms",
+      "Officer",
+      "Skirmisher"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "One Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 46.666666666666664,
+      "avgHeavyDamage": 60,
+      "avgRange": 159.20477666666667,
+      "avgSpeed": 308.3333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 154.29996,
+        "lightDamage": 50,
+        "heavyDamage": 65,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 450,
+        "heavyRelease": 450,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 21.450000000000003
+      },
+      "overhead": {
+        "range": 147.82063,
+        "lightDamage": 55,
+        "heavyDamage": 65,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 450,
+        "heavyRelease": 475,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 18.150000000000002,
+        "heavyStaminaDamage": 21.450000000000003
+      },
+      "stab": {
+        "range": 175.49374,
+        "lightDamage": 35,
+        "heavyDamage": 50,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 350,
+        "heavyRelease": 350,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 11.55,
+        "heavyStaminaDamage": 16.5
+      },
+      "special": {
+        "damage": 75,
+        "windup": 850,
+        "release": 450,
+        "recovery": 850,
+        "staminaDamage": 24.750000000000004
+      },
+      "sprintAttack": {
+        "damage": 75,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 24.750000000000004
+      },
+      "throw": {
+        "damage": 55,
+        "windup": 550,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 18.150000000000002
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "axe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "battle_axe",
+    "slug": "battle-axe",
+    "name": "Battle Axe",
+    "aliases": [],
+    "subclassAccess": [
+      "Crusader",
+      "Devastator"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "Two Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 53.333333333333336,
+      "avgHeavyDamage": 73.33333333333333,
+      "avgRange": 177.16804666666667,
+      "avgSpeed": 466.8333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 181.83571,
+        "lightDamage": 55,
+        "heavyDamage": 75,
+        "lightWindup": 325.5,
+        "heavyWindup": 575.5,
+        "lightRelease": 550,
+        "heavyRelease": 600,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 18.150000000000002,
+        "heavyStaminaDamage": 24.750000000000004
+      },
+      "overhead": {
+        "range": 179.17424,
+        "lightDamage": 65,
+        "heavyDamage": 85,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 525,
+        "heavyRelease": 550,
+        "lightRecovery": 950,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 21.450000000000003,
+        "heavyStaminaDamage": 28.05
+      },
+      "stab": {
+        "range": 170.49419,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 375,
+        "heavyRelease": 375,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 13.200000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "special": {
+        "damage": 100,
+        "windup": 1000,
+        "release": 500,
+        "recovery": 1300,
+        "staminaDamage": 33
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 500,
+        "recovery": 1000,
+        "staminaDamage": 26.400000000000002
+      },
+      "throw": {
+        "damage": 70,
+        "windup": 550,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 23.1
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "battle_axe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "cudgel",
+    "slug": "cudgel",
+    "name": "Cudgel",
+    "aliases": [],
+    "subclassAccess": [
+      "Ambusher",
+      "Crossbowman",
+      "Longbowman",
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "Club",
+      "One Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 28.333333333333332,
+      "avgHeavyDamage": 41.666666666666664,
+      "avgRange": 154.62588000000002,
+      "avgSpeed": 275
+    },
+    "attacks": {
+      "slash": {
+        "range": 148.43651,
+        "lightDamage": 30,
+        "heavyDamage": 45,
+        "lightWindup": 125,
+        "heavyWindup": 375,
+        "lightRelease": 400,
+        "heavyRelease": 450,
+        "lightRecovery": 700,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 16.875
+      },
+      "overhead": {
+        "range": 145.83125,
+        "lightDamage": 30,
+        "heavyDamage": 45,
+        "lightWindup": 125,
+        "heavyWindup": 375,
+        "lightRelease": 400,
+        "heavyRelease": 450,
+        "lightRecovery": 700,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 16.875
+      },
+      "stab": {
+        "range": 169.60988,
+        "lightDamage": 25,
+        "heavyDamage": 35,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 700,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 9.375,
+        "heavyStaminaDamage": 13.125
+      },
+      "special": {
+        "damage": 55,
+        "windup": 800,
+        "release": 450,
+        "recovery": 900,
+        "staminaDamage": 20.625
+      },
+      "sprintAttack": {
+        "damage": 55,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 20.625
+      },
+      "throw": {
+        "damage": 25,
+        "windup": 550,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 9.375
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "cudgel",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "dagger",
+    "slug": "dagger",
+    "name": "Dagger",
+    "aliases": [],
+    "subclassAccess": [
+      "Ambusher"
+    ],
+    "weaponTypes": [
+      "Dagger",
+      "One Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 40,
+      "avgHeavyDamage": 53.333333333333336,
+      "avgRange": 148.93292999999997,
+      "avgSpeed": 246.66666666666666
+    },
+    "attacks": {
+      "slash": {
+        "range": 142.69188,
+        "lightDamage": 30,
+        "heavyDamage": 40,
+        "lightWindup": 100,
+        "heavyWindup": 350,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 9,
+        "heavyStaminaDamage": 12
+      },
+      "overhead": {
+        "range": 140.35501,
+        "lightDamage": 40,
+        "heavyDamage": 50,
+        "lightWindup": 100,
+        "heavyWindup": 350,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 15
+      },
+      "stab": {
+        "range": 163.7519,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 165,
+        "heavyWindup": 415,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 21
+      },
+      "special": {
+        "damage": 100,
+        "windup": 1100,
+        "release": 350,
+        "recovery": 850,
+        "staminaDamage": 30
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 300,
+        "recovery": 1000,
+        "staminaDamage": 24
+      },
+      "throw": {
+        "damage": 30,
+        "windup": 450,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 9
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "dagger",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "dane_axe",
+    "slug": "dane-axe",
+    "name": "Dane Axe",
+    "aliases": [],
+    "subclassAccess": [
+      "Raider"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "Two Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 50,
+      "avgHeavyDamage": 70,
+      "avgRange": 183.75731666666664,
+      "avgSpeed": 400
+    },
+    "attacks": {
+      "slash": {
+        "range": 189.97368,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 275,
+        "heavyWindup": 525,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 23.1
+      },
+      "overhead": {
+        "range": 182.35857,
+        "lightDamage": 60,
+        "heavyDamage": 80,
+        "lightWindup": 250,
+        "heavyWindup": 500,
+        "lightRelease": 475,
+        "heavyRelease": 500,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 19.8,
+        "heavyStaminaDamage": 26.400000000000002
+      },
+      "stab": {
+        "range": 178.9397,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 300,
+        "heavyWindup": 550,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.200000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "special": {
+        "damage": 85,
+        "windup": 850,
+        "release": 500,
+        "recovery": 1000,
+        "staminaDamage": 28.05
+      },
+      "sprintAttack": {
+        "damage": 70,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 23.1
+      },
+      "throw": {
+        "damage": 80,
+        "windup": 450,
+        "release": 570,
+        "recovery": 550,
+        "staminaDamage": 26.400000000000002
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "dane_axe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "executioners_axe",
+    "slug": "executioners-axe",
+    "name": "Executioners Axe",
+    "aliases": [
+      "Ex Axe",
+      "Executioner Axe"
+    ],
+    "subclassAccess": [
+      "Crusader",
+      "Devastator"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "Two Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 45,
+      "avgHeavyDamage": 63.333333333333336,
+      "avgRange": 211.32529,
+      "avgSpeed": 466.75
+    },
+    "attacks": {
+      "slash": {
+        "range": 219.51657,
+        "lightDamage": 45,
+        "heavyDamage": 70,
+        "lightWindup": 325.5,
+        "heavyWindup": 600,
+        "lightRelease": 600,
+        "heavyRelease": 650,
+        "lightRecovery": 1100,
+        "heavyRecovery": 1250,
+        "lightStaminaDamage": 14.850000000000001,
+        "heavyStaminaDamage": 23.1
+      },
+      "overhead": {
+        "range": 204.21727,
+        "lightDamage": 60,
+        "heavyDamage": 70,
+        "lightWindup": 325,
+        "heavyWindup": 600,
+        "lightRelease": 550,
+        "heavyRelease": 575,
+        "lightRecovery": 1100,
+        "heavyRecovery": 1250,
+        "lightStaminaDamage": 19.8,
+        "heavyStaminaDamage": 23.1
+      },
+      "stab": {
+        "range": 210.24203,
+        "lightDamage": 30,
+        "heavyDamage": 50,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 1100,
+        "heavyRecovery": 1250,
+        "lightStaminaDamage": 9.9,
+        "heavyStaminaDamage": 16.5
+      },
+      "special": {
+        "damage": 80,
+        "windup": 1100,
+        "release": 500,
+        "recovery": 1350,
+        "staminaDamage": 26.400000000000002
+      },
+      "sprintAttack": {
+        "damage": 75,
+        "windup": 600,
+        "release": 500,
+        "recovery": 1000,
+        "staminaDamage": 24.750000000000004
+      },
+      "throw": {
+        "damage": 70,
+        "windup": 550,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 23.1
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "executioners_axe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "falchion",
+    "slug": "falchion",
+    "name": "Falchion",
+    "aliases": [],
+    "subclassAccess": [
+      "Crusader",
+      "Guardian",
+      "Man at Arms",
+      "Skirmisher"
+    ],
+    "weaponTypes": [
+      "One Handed",
+      "Sword"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 48.333333333333336,
+      "avgHeavyDamage": 65,
+      "avgRange": 177.14187333333334,
+      "avgSpeed": 325
+    },
+    "attacks": {
+      "slash": {
+        "range": 173.16882,
+        "lightDamage": 50,
+        "heavyDamage": 65,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 475,
+        "heavyRelease": 475,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 19.5
+      },
+      "overhead": {
+        "range": 165.2532,
+        "lightDamage": 55,
+        "heavyDamage": 70,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 450,
+        "heavyRelease": 500,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 21
+      },
+      "stab": {
+        "range": 193.0036,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 18
+      },
+      "special": {
+        "damage": 80,
+        "windup": 900,
+        "release": 350,
+        "recovery": 1000,
+        "staminaDamage": 24
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 300,
+        "recovery": 1000,
+        "staminaDamage": 24
+      },
+      "throw": {
+        "damage": 40,
+        "windup": 600,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 12
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "falchion",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "glaive",
+    "slug": "glaive",
+    "name": "Glaive",
+    "aliases": [
+      "glave"
+    ],
+    "subclassAccess": [
+      "Poleman",
+      "Raider"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "Polearm",
+      "Two Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 36.666666666666664,
+      "avgHeavyDamage": 56.666666666666664,
+      "avgRange": 253.21901666666668,
+      "avgSpeed": 391.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 246.63309,
+        "lightDamage": 30,
+        "heavyDamage": 50,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 550,
+        "heavyRelease": 550,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 9.9,
+        "heavyStaminaDamage": 16.5
+      },
+      "overhead": {
+        "range": 259.3626,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 475,
+        "heavyRelease": 500,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 13.200000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "stab": {
+        "range": 253.66136,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 400,
+        "heavyWindup": 650,
+        "lightRelease": 350,
+        "heavyRelease": 400,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 13.200000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "special": {
+        "damage": 60,
+        "windup": 900,
+        "release": 550,
+        "recovery": 1100,
+        "staminaDamage": 19.8
+      },
+      "sprintAttack": {
+        "damage": 60,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 19.8
+      },
+      "throw": {
+        "damage": 55,
+        "windup": 600,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 18.150000000000002
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "glaive",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "goedendag",
+    "slug": "goedendag",
+    "name": "Goedendag",
+    "aliases": [],
+    "subclassAccess": [
+      "Engineer",
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "Club",
+      "Mace",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 53.333333333333336,
+      "avgHeavyDamage": 73.33333333333333,
+      "avgRange": 182.57187333333334,
+      "avgSpeed": 529.1666666666666
+    },
+    "attacks": {
+      "slash": {
+        "range": 191.88905,
+        "lightDamage": 45,
+        "heavyDamage": 65,
+        "lightWindup": 400,
+        "heavyWindup": 625,
+        "lightRelease": 475,
+        "heavyRelease": 550,
+        "lightRecovery": 1300,
+        "heavyRecovery": 1450,
+        "lightStaminaDamage": 16.875,
+        "heavyStaminaDamage": 24.375
+      },
+      "overhead": {
+        "range": 173.84775,
+        "lightDamage": 55,
+        "heavyDamage": 75,
+        "lightWindup": 475,
+        "heavyWindup": 625,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 1300,
+        "heavyRecovery": 1450,
+        "lightStaminaDamage": 20.625,
+        "heavyStaminaDamage": 28.125
+      },
+      "stab": {
+        "range": 181.97882,
+        "lightDamage": 60,
+        "heavyDamage": 80,
+        "lightWindup": 425,
+        "heavyWindup": 625,
+        "lightRelease": 400,
+        "heavyRelease": 450,
+        "lightRecovery": 1200,
+        "heavyRecovery": 1250,
+        "lightStaminaDamage": 22.5,
+        "heavyStaminaDamage": 30
+      },
+      "special": {
+        "damage": 90,
+        "windup": 900,
+        "release": 400,
+        "recovery": 1200,
+        "staminaDamage": 33.75
+      },
+      "sprintAttack": {
+        "damage": 85,
+        "windup": 600,
+        "release": 450,
+        "recovery": 1000,
+        "staminaDamage": 31.875
+      },
+      "throw": {
+        "damage": 50,
+        "windup": 650,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 18.75
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "goedendag",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "greatsword",
+    "slug": "greatsword",
+    "name": "Greatsword",
+    "aliases": [
+      "great sword"
+    ],
+    "subclassAccess": [
+      "Devastator",
+      "Officer"
+    ],
+    "weaponTypes": [
+      "Sword",
+      "Two Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 56.666666666666664,
+      "avgHeavyDamage": 76.66666666666667,
+      "avgRange": 217.85854666666668,
+      "avgSpeed": 458.3333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 234.26308,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 325,
+        "heavyWindup": 575,
+        "lightRelease": 550,
+        "heavyRelease": 550,
+        "lightRecovery": 1100,
+        "heavyRecovery": 1200,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 21
+      },
+      "overhead": {
+        "range": 213.82138,
+        "lightDamage": 70,
+        "heavyDamage": 90,
+        "lightWindup": 325,
+        "heavyWindup": 575,
+        "lightRelease": 525,
+        "heavyRelease": 525,
+        "lightRecovery": 1100,
+        "heavyRecovery": 1200,
+        "lightStaminaDamage": 21,
+        "heavyStaminaDamage": 27
+      },
+      "stab": {
+        "range": 205.49118,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 425,
+        "heavyRelease": 400,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1100,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 21
+      },
+      "special": {
+        "damage": 100,
+        "windup": 1000,
+        "release": 450,
+        "recovery": 1350,
+        "staminaDamage": 30
+      },
+      "sprintAttack": {
+        "damage": 100,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 30
+      },
+      "throw": {
+        "damage": 60,
+        "windup": 700,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 18
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "greatsword",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "halberd",
+    "slug": "halberd",
+    "name": "Halberd",
+    "aliases": [],
+    "subclassAccess": [
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "Polearm",
+      "Two Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 51.666666666666664,
+      "avgHeavyDamage": 66.66666666666667,
+      "avgRange": 248.40103666666667,
+      "avgSpeed": 491.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 241.33958,
+        "lightDamage": 45,
+        "heavyDamage": 60,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 600,
+        "heavyRelease": 600,
+        "lightRecovery": 1050,
+        "heavyRecovery": 1200,
+        "lightStaminaDamage": 14.850000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "overhead": {
+        "range": 254.6012,
+        "lightDamage": 55,
+        "heavyDamage": 70,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 1050,
+        "heavyRecovery": 1200,
+        "lightStaminaDamage": 18.150000000000002,
+        "heavyStaminaDamage": 23.1
+      },
+      "stab": {
+        "range": 249.26233,
+        "lightDamage": 55,
+        "heavyDamage": 70,
+        "lightWindup": 400,
+        "heavyWindup": 650,
+        "lightRelease": 370,
+        "heavyRelease": 325,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1150,
+        "lightStaminaDamage": 18.150000000000002,
+        "heavyStaminaDamage": 23.1
+      },
+      "special": {
+        "damage": 85,
+        "windup": 1050,
+        "release": 600,
+        "recovery": 1300,
+        "staminaDamage": 28.05
+      },
+      "sprintAttack": {
+        "damage": 75,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 24.750000000000004
+      },
+      "throw": {
+        "damage": 65,
+        "windup": 650,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 21.450000000000003
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "halberd",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "hatchet",
+    "slug": "hatchet",
+    "name": "Hatchet",
+    "aliases": [],
+    "subclassAccess": [
+      "Ambusher",
+      "Guardian",
+      "Longbowman",
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "One Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 41.666666666666664,
+      "avgHeavyDamage": 56.666666666666664,
+      "avgRange": 136.24473666666665,
+      "avgSpeed": 275
+    },
+    "attacks": {
+      "slash": {
+        "range": 129.96704,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 125,
+        "heavyWindup": 375,
+        "lightRelease": 450,
+        "heavyRelease": 500,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.200000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "overhead": {
+        "range": 128.14351,
+        "lightDamage": 55,
+        "heavyDamage": 70,
+        "lightWindup": 125,
+        "heavyWindup": 375,
+        "lightRelease": 450,
+        "heavyRelease": 475,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 18.150000000000002,
+        "heavyStaminaDamage": 23.1
+      },
+      "stab": {
+        "range": 150.62366,
+        "lightDamage": 30,
+        "heavyDamage": 40,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 350,
+        "heavyRelease": 350,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 9.9,
+        "heavyStaminaDamage": 13.200000000000001
+      },
+      "special": {
+        "damage": 70,
+        "windup": 800,
+        "release": 450,
+        "recovery": 900,
+        "staminaDamage": 23.1
+      },
+      "sprintAttack": {
+        "damage": 60,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 19.8
+      },
+      "throw": {
+        "damage": 50,
+        "windup": 550,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 16.5
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "hatchet",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "heavy_cavalry_sword",
+    "slug": "heavy-cavalry-sword",
+    "name": "Heavy Cavalry Sword",
+    "aliases": [],
+    "subclassAccess": [
+      "Guardian",
+      "Man at Arms"
+    ],
+    "weaponTypes": [
+      "Man At Arms",
+      "One Handed",
+      "Sword"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 45,
+      "avgHeavyDamage": 60,
+      "avgRange": 205.45128333333332,
+      "avgSpeed": 379.1666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 199.33054,
+        "lightDamage": 45,
+        "heavyDamage": 60,
+        "lightWindup": 250,
+        "heavyWindup": 500,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 900,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 13.5,
+        "heavyStaminaDamage": 18
+      },
+      "overhead": {
+        "range": 194.84593,
+        "lightDamage": 50,
+        "heavyDamage": 65,
+        "lightWindup": 225,
+        "heavyWindup": 475,
+        "lightRelease": 475,
+        "heavyRelease": 475,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 19.5
+      },
+      "stab": {
+        "range": 222.17738,
+        "lightDamage": 40,
+        "heavyDamage": 55,
+        "lightWindup": 300,
+        "heavyWindup": 525,
+        "lightRelease": 425,
+        "heavyRelease": 425,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 16.5
+      },
+      "special": {
+        "damage": 75,
+        "windup": 850,
+        "release": 450,
+        "recovery": 850,
+        "staminaDamage": 22.5
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 600,
+        "release": 300,
+        "recovery": 1000,
+        "staminaDamage": 19.5
+      },
+      "throw": {
+        "damage": 40,
+        "windup": 550,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 12
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "heavy_cavalry_sword",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "heavy_mace",
+    "slug": "heavy-mace",
+    "name": "Heavy Mace",
+    "aliases": [],
+    "subclassAccess": [
+      "Officer"
+    ],
+    "weaponTypes": [
+      "Club",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 43.333333333333336,
+      "avgHeavyDamage": 63.333333333333336,
+      "avgRange": 200.32654666666667,
+      "avgSpeed": 414.1666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 206.41544,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 285,
+        "heavyWindup": 500,
+        "lightRelease": 550,
+        "heavyRelease": 600,
+        "lightRecovery": 950,
+        "heavyRecovery": 1100,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 22.5
+      },
+      "overhead": {
+        "range": 197.56145,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 300,
+        "heavyWindup": 550,
+        "lightRelease": 550,
+        "heavyRelease": 575,
+        "lightRecovery": 950,
+        "heavyRecovery": 1100,
+        "lightStaminaDamage": 18.75,
+        "heavyStaminaDamage": 26.25
+      },
+      "stab": {
+        "range": 197.00275,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 300,
+        "heavyWindup": 550,
+        "lightRelease": 350,
+        "heavyRelease": 350,
+        "lightRecovery": 950,
+        "heavyRecovery": 1100,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 22.5
+      },
+      "special": {
+        "damage": 80,
+        "windup": 1000,
+        "release": 500,
+        "recovery": 1300,
+        "staminaDamage": 30
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 24.375
+      },
+      "throw": {
+        "damage": 40,
+        "windup": 650,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 15
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "heavy_mace",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "highland_sword",
+    "slug": "highland-sword",
+    "name": "Highland Sword",
+    "aliases": [
+      "Executioner Sword",
+      "Executioner's Sword",
+      "Executioners Sword",
+      "Highland",
+      "Highlander",
+      "Highlander Sword",
+      "Longest Sword"
+    ],
+    "subclassAccess": [
+      "Devastator"
+    ],
+    "weaponTypes": [
+      "Sword",
+      "Two Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 56.666666666666664,
+      "avgHeavyDamage": 80,
+      "avgRange": 215.44778,
+      "avgSpeed": 533.3333333333334
+    },
+    "attacks": {
+      "slash": {
+        "range": 228.62549,
+        "lightDamage": 55,
+        "heavyDamage": 75,
+        "lightWindup": 425,
+        "heavyWindup": 625,
+        "lightRelease": 650,
+        "heavyRelease": 680,
+        "lightRecovery": 1400,
+        "heavyRecovery": 1550,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 22.5
+      },
+      "overhead": {
+        "range": 215.11009,
+        "lightDamage": 70,
+        "heavyDamage": 100,
+        "lightWindup": 475,
+        "heavyWindup": 625,
+        "lightRelease": 650,
+        "heavyRelease": 680,
+        "lightRecovery": 1400,
+        "heavyRecovery": 1550,
+        "lightStaminaDamage": 21,
+        "heavyStaminaDamage": 30
+      },
+      "stab": {
+        "range": 202.60776,
+        "lightDamage": 45,
+        "heavyDamage": 65,
+        "lightWindup": 425,
+        "heavyWindup": 625,
+        "lightRelease": 450,
+        "heavyRelease": 425,
+        "lightRecovery": 1500,
+        "heavyRecovery": 1550,
+        "lightStaminaDamage": 13.5,
+        "heavyStaminaDamage": 19.5
+      },
+      "special": {
+        "damage": 60,
+        "windup": 900,
+        "release": 800,
+        "recovery": 1500,
+        "staminaDamage": 18
+      },
+      "sprintAttack": {
+        "damage": 105,
+        "windup": 600,
+        "release": 500,
+        "recovery": 1000,
+        "staminaDamage": 31.5
+      },
+      "throw": {
+        "damage": 85,
+        "windup": 800,
+        "release": 600,
+        "recovery": 650,
+        "staminaDamage": 25.5
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "highland_sword",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "javelin",
+    "slug": "javelin",
+    "name": "Javelin",
+    "aliases": [],
+    "subclassAccess": [
+      "Skirmisher"
+    ],
+    "weaponTypes": [
+      "One Handed",
+      "Spear"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 35,
+      "avgHeavyDamage": 55,
+      "avgRange": 223.38262666666665,
+      "avgSpeed": 358.3333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 215.66267,
+        "lightDamage": 30,
+        "heavyDamage": 50,
+        "lightWindup": 250,
+        "heavyWindup": 500,
+        "lightRelease": 350,
+        "heavyRelease": 375,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 9,
+        "heavyStaminaDamage": 15
+      },
+      "overhead": {
+        "range": 214.14117,
+        "lightDamage": 35,
+        "heavyDamage": 55,
+        "lightWindup": 250,
+        "heavyWindup": 500,
+        "lightRelease": 425,
+        "heavyRelease": 400,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 10.5,
+        "heavyStaminaDamage": 16.5
+      },
+      "stab": {
+        "range": 240.34404,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 18
+      },
+      "special": {
+        "damage": 50,
+        "windup": 700,
+        "release": 350,
+        "recovery": 900,
+        "staminaDamage": 15
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 700,
+        "release": 550,
+        "recovery": 1000,
+        "staminaDamage": 19.5
+      },
+      "throw": {
+        "damage": 85,
+        "windup": 700,
+        "release": 500,
+        "recovery": 600,
+        "staminaDamage": 25.5
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "javelin",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "katars",
+    "slug": "katars",
+    "name": "Katars",
+    "aliases": [],
+    "subclassAccess": [
+      "Ambusher"
+    ],
+    "weaponTypes": [
+      "Sword",
+      "Two Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 38.333333333333336,
+      "avgHeavyDamage": 50,
+      "avgRange": 157.66828666666666,
+      "avgSpeed": 250
+    },
+    "attacks": {
+      "slash": {
+        "range": 156.52014,
+        "lightDamage": 40,
+        "heavyDamage": 50,
+        "lightWindup": 100,
+        "heavyWindup": 350,
+        "lightRelease": 200,
+        "heavyRelease": 225,
+        "lightRecovery": 750,
+        "heavyRecovery": 900,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 15
+      },
+      "overhead": {
+        "range": 155.72444,
+        "lightDamage": 30,
+        "heavyDamage": 45,
+        "lightWindup": 150,
+        "heavyWindup": 450,
+        "lightRelease": 350,
+        "heavyRelease": 375,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 9,
+        "heavyStaminaDamage": 13.5
+      },
+      "stab": {
+        "range": 160.76028,
+        "lightDamage": 45,
+        "heavyDamage": 55,
+        "lightWindup": 100,
+        "heavyWindup": 350,
+        "lightRelease": 200,
+        "heavyRelease": 200,
+        "lightRecovery": 700,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 13.5,
+        "heavyStaminaDamage": 16.5
+      },
+      "special": {
+        "damage": 30,
+        "windup": 400,
+        "release": 360,
+        "recovery": 900,
+        "staminaDamage": 9
+      },
+      "sprintAttack": {
+        "damage": 60,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 18
+      },
+      "throw": {
+        "damage": 25,
+        "windup": 600,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 7.5
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "katars",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "knife",
+    "slug": "knife",
+    "name": "Knife",
+    "aliases": [],
+    "subclassAccess": [
+      "Crossbowman",
+      "Devastator",
+      "Man at Arms",
+      "Poleman",
+      "Raider",
+      "Skirmisher"
+    ],
+    "weaponTypes": [
+      "Dagger",
+      "One Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 40,
+      "avgHeavyDamage": 50,
+      "avgRange": 137.5877866666667,
+      "avgSpeed": 250
+    },
+    "attacks": {
+      "slash": {
+        "range": 131.21382,
+        "lightDamage": 35,
+        "heavyDamage": 45,
+        "lightWindup": 100,
+        "heavyWindup": 350,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 10.5,
+        "heavyStaminaDamage": 13.5
+      },
+      "overhead": {
+        "range": 129.53645,
+        "lightDamage": 45,
+        "heavyDamage": 55,
+        "lightWindup": 100,
+        "heavyWindup": 350,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 13.5,
+        "heavyStaminaDamage": 16.5
+      },
+      "stab": {
+        "range": 152.01309,
+        "lightDamage": 40,
+        "heavyDamage": 50,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 15
+      },
+      "special": {
+        "damage": 60,
+        "windup": 700,
+        "release": 350,
+        "recovery": 850,
+        "staminaDamage": 18
+      },
+      "sprintAttack": {
+        "damage": 60,
+        "windup": 600,
+        "release": 300,
+        "recovery": 1000,
+        "staminaDamage": 18
+      },
+      "throw": {
+        "damage": 40,
+        "windup": 450,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 12
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "knife",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "longsword",
+    "slug": "longsword",
+    "name": "Longsword",
+    "aliases": [
+      "long sword"
+    ],
+    "subclassAccess": [
+      "Officer"
+    ],
+    "weaponTypes": [
+      "Sword",
+      "Two Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 48.333333333333336,
+      "avgHeavyDamage": 65,
+      "avgRange": 195.90678666666668,
+      "avgSpeed": 354.1666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 196.13673,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 225,
+        "heavyWindup": 475,
+        "lightRelease": 475,
+        "heavyRelease": 500,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 18
+      },
+      "overhead": {
+        "range": 185.86803,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 450,
+        "heavyRelease": 450,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 21
+      },
+      "stab": {
+        "range": 205.7156,
+        "lightDamage": 55,
+        "heavyDamage": 65,
+        "lightWindup": 275,
+        "heavyWindup": 500,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 19.5
+      },
+      "special": {
+        "damage": 80,
+        "windup": 850,
+        "release": 450,
+        "recovery": 1200,
+        "staminaDamage": 24
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 24
+      },
+      "throw": {
+        "damage": 50,
+        "windup": 550,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 15
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "longsword",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "mace",
+    "slug": "mace",
+    "name": "Mace",
+    "aliases": [],
+    "subclassAccess": [
+      "Guardian",
+      "Man at Arms",
+      "Officer",
+      "Skirmisher"
+    ],
+    "weaponTypes": [
+      "Club",
+      "One Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 38.333333333333336,
+      "avgHeavyDamage": 53.333333333333336,
+      "avgRange": 174.75845,
+      "avgSpeed": 283.3333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 169.89227,
+        "lightDamage": 40,
+        "heavyDamage": 55,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 475,
+        "heavyRelease": 475,
+        "lightRecovery": 750,
+        "heavyRecovery": 900,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 20.625
+      },
+      "overhead": {
+        "range": 163.30936,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 450,
+        "heavyRelease": 475,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 22.5
+      },
+      "stab": {
+        "range": 191.07372,
+        "lightDamage": 35,
+        "heavyDamage": 45,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 300,
+        "heavyRelease": 300,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.125,
+        "heavyStaminaDamage": 16.875
+      },
+      "special": {
+        "damage": 65,
+        "windup": 850,
+        "release": 450,
+        "recovery": 950,
+        "staminaDamage": 24.375
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 24.375
+      },
+      "throw": {
+        "damage": 25,
+        "windup": 600,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 9.375
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "mace",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "maul",
+    "slug": "maul",
+    "name": "Maul",
+    "aliases": [],
+    "subclassAccess": [
+      "Devastator"
+    ],
+    "weaponTypes": [
+      "Hammer",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 46.666666666666664,
+      "avgHeavyDamage": 63.333333333333336,
+      "avgRange": 180.81760666666665,
+      "avgSpeed": 533.3333333333334
+    },
+    "attacks": {
+      "slash": {
+        "range": 186.11,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 375,
+        "heavyWindup": 675,
+        "lightRelease": 550,
+        "heavyRelease": 600,
+        "lightRecovery": 1150,
+        "heavyRecovery": 1300,
+        "lightStaminaDamage": 18.75,
+        "heavyStaminaDamage": 26.25
+      },
+      "overhead": {
+        "range": 180.56447,
+        "lightDamage": 60,
+        "heavyDamage": 80,
+        "lightWindup": 450,
+        "heavyWindup": 750,
+        "lightRelease": 525,
+        "heavyRelease": 550,
+        "lightRecovery": 1150,
+        "heavyRecovery": 1300,
+        "lightStaminaDamage": 22.5,
+        "heavyStaminaDamage": 30
+      },
+      "stab": {
+        "range": 175.77835,
+        "lightDamage": 30,
+        "heavyDamage": 40,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 375,
+        "heavyRelease": 375,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 15
+      },
+      "special": {
+        "damage": 120,
+        "windup": 1350,
+        "release": 500,
+        "recovery": 1350,
+        "staminaDamage": 45
+      },
+      "sprintAttack": {
+        "damage": 85,
+        "windup": 600,
+        "release": 450,
+        "recovery": 1000,
+        "staminaDamage": 31.875
+      },
+      "throw": {
+        "damage": 50,
+        "windup": 650,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 18.75
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "maul",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "messer",
+    "slug": "messer",
+    "name": "Messer",
+    "aliases": [],
+    "subclassAccess": [
+      "Crusader",
+      "Raider"
+    ],
+    "weaponTypes": [
+      "Sword",
+      "Two Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 55,
+      "avgHeavyDamage": 68.33333333333333,
+      "avgRange": 207.44068666666666,
+      "avgSpeed": 420.8333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 206.3931,
+        "lightDamage": 55,
+        "heavyDamage": 70,
+        "lightWindup": 325,
+        "heavyWindup": 525,
+        "lightRelease": 525,
+        "heavyRelease": 550,
+        "lightRecovery": 950,
+        "heavyRecovery": 1100,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 21
+      },
+      "overhead": {
+        "range": 199.2454,
+        "lightDamage": 70,
+        "heavyDamage": 80,
+        "lightWindup": 325,
+        "heavyWindup": 525,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 950,
+        "heavyRecovery": 1100,
+        "lightStaminaDamage": 21,
+        "heavyStaminaDamage": 24
+      },
+      "stab": {
+        "range": 216.68356,
+        "lightDamage": 40,
+        "heavyDamage": 55,
+        "lightWindup": 300,
+        "heavyWindup": 525,
+        "lightRelease": 425,
+        "heavyRelease": 425,
+        "lightRecovery": 950,
+        "heavyRecovery": 1100,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 16.5
+      },
+      "special": {
+        "damage": 90,
+        "windup": 900,
+        "release": 450,
+        "recovery": 1300,
+        "staminaDamage": 27
+      },
+      "sprintAttack": {
+        "damage": 90,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 27
+      },
+      "throw": {
+        "damage": 50,
+        "windup": 600,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 15
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "messer",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "morning_star",
+    "slug": "morning-star",
+    "name": "Morning Star",
+    "aliases": [],
+    "subclassAccess": [
+      "Crusader",
+      "Man at Arms"
+    ],
+    "weaponTypes": [
+      "Club",
+      "One Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 38.333333333333336,
+      "avgHeavyDamage": 53.333333333333336,
+      "avgRange": 172.91603,
+      "avgSpeed": 291.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 166.9694,
+        "lightDamage": 40,
+        "heavyDamage": 55,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 475,
+        "heavyRelease": 475,
+        "lightRecovery": 750,
+        "heavyRecovery": 900,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 20.625
+      },
+      "overhead": {
+        "range": 163.59764,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 450,
+        "heavyRelease": 475,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 22.5
+      },
+      "stab": {
+        "range": 188.18105,
+        "lightDamage": 35,
+        "heavyDamage": 45,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 300,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.125,
+        "heavyStaminaDamage": 16.875
+      },
+      "special": {
+        "damage": 65,
+        "windup": 850,
+        "release": 450,
+        "recovery": 950,
+        "staminaDamage": 24.375
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 24.375
+      },
+      "throw": {
+        "damage": 25,
+        "windup": 600,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 9.375
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "morning_star",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "one_handed_spear",
+    "slug": "one-handed-spear",
+    "name": "One Handed Spear",
+    "aliases": [],
+    "subclassAccess": [
+      "Guardian",
+      "Man at Arms"
+    ],
+    "weaponTypes": [
+      "One Handed",
+      "Spear"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 40,
+      "avgHeavyDamage": 65,
+      "avgRange": 252.28674,
+      "avgSpeed": 369.1666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 250.43562,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 250,
+        "heavyWindup": 500,
+        "lightRelease": 375,
+        "heavyRelease": 400,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 18
+      },
+      "overhead": {
+        "range": 248.98463,
+        "lightDamage": 30,
+        "heavyDamage": 65,
+        "lightWindup": 250,
+        "heavyWindup": 500,
+        "lightRelease": 450,
+        "heavyRelease": 450,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 9,
+        "heavyStaminaDamage": 19.5
+      },
+      "stab": {
+        "range": 257.43997,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 240,
+        "heavyWindup": 475,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 21
+      },
+      "special": {
+        "damage": 80,
+        "windup": 800,
+        "release": 500,
+        "recovery": 1150,
+        "staminaDamage": 24
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 24
+      },
+      "throw": {
+        "damage": 60,
+        "windup": 600,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 18
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "one_handed_spear",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "pickaxe",
+    "slug": "pickaxe",
+    "name": "Pickaxe",
+    "aliases": [
+      "Pick axe"
+    ],
+    "subclassAccess": [
+      "Engineer"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "One Handed",
+      "Tool"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 41.666666666666664,
+      "avgHeavyDamage": 61.666666666666664,
+      "avgRange": 159.74695666666665,
+      "avgSpeed": 266.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 153.6611,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 125,
+        "heavyWindup": 375,
+        "lightRelease": 450,
+        "heavyRelease": 450,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.200000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "overhead": {
+        "range": 150.74727,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 125,
+        "heavyWindup": 375,
+        "lightRelease": 425,
+        "heavyRelease": 475,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 23.1
+      },
+      "stab": {
+        "range": 174.8325,
+        "lightDamage": 35,
+        "heavyDamage": 55,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 850,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 11.55,
+        "heavyStaminaDamage": 18.150000000000002
+      },
+      "special": {
+        "damage": 70,
+        "windup": 800,
+        "release": 450,
+        "recovery": 1000,
+        "staminaDamage": 23.1
+      },
+      "sprintAttack": {
+        "damage": 70,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 23.1
+      },
+      "throw": {
+        "damage": 35,
+        "windup": 600,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 11.55
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "pickaxe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "pole_axe",
+    "slug": "pole-axe",
+    "name": "Pole Axe",
+    "aliases": [
+      "poleaxe"
+    ],
+    "subclassAccess": [
+      "Officer"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "Polearm",
+      "Two Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 48.333333333333336,
+      "avgHeavyDamage": 66.66666666666667,
+      "avgRange": 214.48328333333333,
+      "avgSpeed": 466.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 208.85464,
+        "lightDamage": 45,
+        "heavyDamage": 60,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 14.850000000000001,
+        "heavyStaminaDamage": 19.8
+      },
+      "overhead": {
+        "range": 220.49916,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 300,
+        "heavyWindup": 600,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 23.1
+      },
+      "stab": {
+        "range": 214.09605,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 350,
+        "heavyRelease": 400,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 23.1
+      },
+      "special": {
+        "damage": 70,
+        "windup": 1000,
+        "release": 600,
+        "recovery": 1200,
+        "staminaDamage": 23.1
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 21.450000000000003
+      },
+      "throw": {
+        "damage": 50,
+        "windup": 600,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 16.5
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "pole_axe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "polehammer",
+    "slug": "polehammer",
+    "name": "Polehammer",
+    "aliases": [
+      "Pole Hammer"
+    ],
+    "subclassAccess": [
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "Hammer",
+      "Polearm",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 45,
+      "avgHeavyDamage": 63.333333333333336,
+      "avgRange": 224.60683000000003,
+      "avgSpeed": 441.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 218.38776,
+        "lightDamage": 45,
+        "heavyDamage": 60,
+        "lightWindup": 300,
+        "heavyWindup": 550,
+        "lightRelease": 575,
+        "heavyRelease": 575,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1150,
+        "lightStaminaDamage": 16.875,
+        "heavyStaminaDamage": 22.5
+      },
+      "overhead": {
+        "range": 230.55086,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 525,
+        "heavyRelease": 550,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1150,
+        "lightStaminaDamage": 18.75,
+        "heavyStaminaDamage": 26.25
+      },
+      "stab": {
+        "range": 224.88187,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 300,
+        "heavyWindup": 550,
+        "lightRelease": 400,
+        "heavyRelease": 420,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1150,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 22.5
+      },
+      "special": {
+        "damage": 100,
+        "windup": 1100,
+        "release": 600,
+        "recovery": 1350,
+        "staminaDamage": 37.5
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 30
+      },
+      "throw": {
+        "damage": 35,
+        "windup": 700,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 13.125
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "polehammer",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "quarterstaff",
+    "slug": "quarterstaff",
+    "name": "Quarterstaff",
+    "aliases": [],
+    "subclassAccess": [
+      "Crusader",
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "Polearm",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 36.666666666666664,
+      "avgHeavyDamage": 50,
+      "avgRange": 205.94092666666666,
+      "avgSpeed": 341.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 165.00572,
+        "lightDamage": 35,
+        "heavyDamage": 50,
+        "lightWindup": 125,
+        "heavyWindup": 375,
+        "lightRelease": 400,
+        "heavyRelease": 450,
+        "lightRecovery": 700,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 13.125,
+        "heavyStaminaDamage": 18.75
+      },
+      "overhead": {
+        "range": 249.17784,
+        "lightDamage": 45,
+        "heavyDamage": 60,
+        "lightWindup": 200,
+        "heavyWindup": 400,
+        "lightRelease": 500,
+        "heavyRelease": 525,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.875,
+        "heavyStaminaDamage": 22.5
+      },
+      "stab": {
+        "range": 203.63922,
+        "lightDamage": 30,
+        "heavyDamage": 40,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 350,
+        "heavyRelease": 400,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 15
+      },
+      "special": {
+        "damage": 30,
+        "windup": 900,
+        "release": 550,
+        "recovery": 1200,
+        "staminaDamage": 11.25
+      },
+      "sprintAttack": {
+        "damage": 45,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 16.875
+      },
+      "throw": {
+        "damage": 20,
+        "windup": 650,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 7.5
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "quarterstaff",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "rapier",
+    "slug": "rapier",
+    "name": "Rapier",
+    "aliases": [],
+    "subclassAccess": [
+      "Man at Arms"
+    ],
+    "weaponTypes": [
+      "One Handed",
+      "Sword"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 38.333333333333336,
+      "avgHeavyDamage": 58.333333333333336,
+      "avgRange": 188.89953333333335,
+      "avgSpeed": 256.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 182.7536,
+        "lightDamage": 30,
+        "heavyDamage": 50,
+        "lightWindup": 120,
+        "heavyWindup": 325,
+        "lightRelease": 425,
+        "heavyRelease": 425,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 9,
+        "heavyStaminaDamage": 15
+      },
+      "overhead": {
+        "range": 182.74905,
+        "lightDamage": 35,
+        "heavyDamage": 55,
+        "lightWindup": 120,
+        "heavyWindup": 325,
+        "lightRelease": 400,
+        "heavyRelease": 425,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 10.5,
+        "heavyStaminaDamage": 16.5
+      },
+      "stab": {
+        "range": 201.19595,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 21
+      },
+      "special": {
+        "damage": 55,
+        "windup": 600,
+        "release": 350,
+        "recovery": 950,
+        "staminaDamage": 16.5
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 600,
+        "release": 300,
+        "recovery": 1000,
+        "staminaDamage": 19.5
+      },
+      "throw": {
+        "damage": 40,
+        "windup": 550,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 12
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "rapier",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "short_sword",
+    "slug": "short-sword",
+    "name": "Short Sword",
+    "aliases": [],
+    "subclassAccess": [
+      "Ambusher",
+      "Crossbowman",
+      "Guardian",
+      "Longbowman",
+      "Man at Arms",
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "One Handed",
+      "Sword"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 38.333333333333336,
+      "avgHeavyDamage": 53.333333333333336,
+      "avgRange": 179.92423666666664,
+      "avgSpeed": 262.5
+    },
+    "attacks": {
+      "slash": {
+        "range": 174.9176,
+        "lightDamage": 35,
+        "heavyDamage": 50,
+        "lightWindup": 125,
+        "heavyWindup": 325,
+        "lightRelease": 400,
+        "heavyRelease": 420,
+        "lightRecovery": 650,
+        "heavyRecovery": 750,
+        "lightStaminaDamage": 10.5,
+        "heavyStaminaDamage": 15
+      },
+      "overhead": {
+        "range": 170.0801,
+        "lightDamage": 40,
+        "heavyDamage": 55,
+        "lightWindup": 125,
+        "heavyWindup": 325,
+        "lightRelease": 400,
+        "heavyRelease": 450,
+        "lightRecovery": 650,
+        "heavyRecovery": 750,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 16.5
+      },
+      "stab": {
+        "range": 194.77501,
+        "lightDamage": 40,
+        "heavyDamage": 55,
+        "lightWindup": 225,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 300,
+        "lightRecovery": 650,
+        "heavyRecovery": 750,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 16.5
+      },
+      "special": {
+        "damage": 65,
+        "windup": 800,
+        "release": 350,
+        "recovery": 900,
+        "staminaDamage": 19.5
+      },
+      "sprintAttack": {
+        "damage": 65,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 19.5
+      },
+      "throw": {
+        "damage": 30,
+        "windup": 550,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 9
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "short_sword",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "shovel",
+    "slug": "shovel",
+    "name": "Shovel",
+    "aliases": [],
+    "subclassAccess": [
+      "Engineer"
+    ],
+    "weaponTypes": [
+      "Tool",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 40,
+      "avgHeavyDamage": 56.666666666666664,
+      "avgRange": 158.89637000000002,
+      "avgSpeed": 300
+    },
+    "attacks": {
+      "slash": {
+        "range": 163.33588,
+        "lightDamage": 30,
+        "heavyDamage": 50,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 475,
+        "heavyRelease": 475,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 18.75
+      },
+      "overhead": {
+        "range": 160.85,
+        "lightDamage": 45,
+        "heavyDamage": 65,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 425,
+        "heavyRelease": 475,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.875,
+        "heavyStaminaDamage": 24.375
+      },
+      "stab": {
+        "range": 152.50323,
+        "lightDamage": 45,
+        "heavyDamage": 55,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 850,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.875,
+        "heavyStaminaDamage": 20.625
+      },
+      "special": {
+        "damage": 70,
+        "windup": 850,
+        "release": 500,
+        "recovery": 1000,
+        "staminaDamage": 26.25
+      },
+      "sprintAttack": {
+        "damage": 70,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 26.25
+      },
+      "throw": {
+        "damage": 35,
+        "windup": 600,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 13.125
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "shovel",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "sledgehammer",
+    "slug": "sledgehammer",
+    "name": "Sledgehammer",
+    "aliases": [
+      "Sledge",
+      "sledge hammer"
+    ],
+    "subclassAccess": [
+      "Engineer"
+    ],
+    "weaponTypes": [
+      "Hammer",
+      "Tool",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 40,
+      "avgHeavyDamage": 58.333333333333336,
+      "avgRange": 159.0636,
+      "avgSpeed": 325
+    },
+    "attacks": {
+      "slash": {
+        "range": 163.53238,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 525,
+        "heavyRelease": 525,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 22.5
+      },
+      "overhead": {
+        "range": 161.09914,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 450,
+        "heavyRelease": 475,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 18.75,
+        "heavyStaminaDamage": 26.25
+      },
+      "stab": {
+        "range": 152.55928,
+        "lightDamage": 30,
+        "heavyDamage": 45,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 16.875
+      },
+      "special": {
+        "damage": 70,
+        "windup": 950,
+        "release": 500,
+        "recovery": 1100,
+        "staminaDamage": 26.25
+      },
+      "sprintAttack": {
+        "damage": 50,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 18.75
+      },
+      "throw": {
+        "damage": 35,
+        "windup": 600,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 13.125
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "sledgehammer",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "spear",
+    "slug": "spear",
+    "name": "Spear",
+    "aliases": [
+      "2 handed spear",
+      "2h spear",
+      "2handed spear",
+      "spear",
+      "two handed spear"
+    ],
+    "subclassAccess": [
+      "Poleman"
+    ],
+    "weaponTypes": [
+      "Spear",
+      "Two Handed"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 40,
+      "avgHeavyDamage": 60,
+      "avgRange": 271.4665166666667,
+      "avgSpeed": 441.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 284.2464,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 350,
+        "heavyRelease": 400,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 18
+      },
+      "overhead": {
+        "range": 241.76045,
+        "lightDamage": 30,
+        "heavyDamage": 50,
+        "lightWindup": 250,
+        "heavyWindup": 500,
+        "lightRelease": 450,
+        "heavyRelease": 500,
+        "lightRecovery": 850,
+        "heavyRecovery": 1000,
+        "lightStaminaDamage": 9,
+        "heavyStaminaDamage": 15
+      },
+      "stab": {
+        "range": 288.3927,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 350,
+        "heavyRelease": 400,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 21
+      },
+      "sprintAttack": {
+        "damage": 70,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 21
+      },
+      "throw": {
+        "damage": 70,
+        "windup": 1000,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 21
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "spear",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "sword",
+    "slug": "sword",
+    "name": "Sword",
+    "aliases": [],
+    "subclassAccess": [
+      "Man at Arms",
+      "Officer"
+    ],
+    "weaponTypes": [
+      "One Handed",
+      "Sword"
+    ],
+    "damageType": "Cut",
+    "summary": {
+      "avgLightDamage": 45,
+      "avgHeavyDamage": 61.666666666666664,
+      "avgRange": 189.29294666666667,
+      "avgSpeed": 300
+    },
+    "attacks": {
+      "slash": {
+        "range": 184.31886,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 425,
+        "heavyRelease": 425,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 12,
+        "heavyStaminaDamage": 18
+      },
+      "overhead": {
+        "range": 179.44798,
+        "lightDamage": 50,
+        "heavyDamage": 65,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 400,
+        "heavyRelease": 425,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 19.5
+      },
+      "stab": {
+        "range": 204.112,
+        "lightDamage": 45,
+        "heavyDamage": 60,
+        "lightWindup": 225,
+        "heavyWindup": 475,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 750,
+        "heavyRecovery": 850,
+        "lightStaminaDamage": 13.5,
+        "heavyStaminaDamage": 18
+      },
+      "special": {
+        "damage": 70,
+        "windup": 850,
+        "release": 350,
+        "recovery": 950,
+        "staminaDamage": 21
+      },
+      "sprintAttack": {
+        "damage": 70,
+        "windup": 600,
+        "release": 300,
+        "recovery": 1000,
+        "staminaDamage": 21
+      },
+      "throw": {
+        "damage": 40,
+        "windup": 550,
+        "release": 400,
+        "recovery": 550,
+        "staminaDamage": 12
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "sword",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "throwing_axe",
+    "slug": "throwing-axe",
+    "name": "Throwing Axe",
+    "aliases": [],
+    "subclassAccess": [
+      "Crusader",
+      "Skirmisher"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "One Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 36.666666666666664,
+      "avgHeavyDamage": 50,
+      "avgRange": 132.44076166666665,
+      "avgSpeed": 283.3333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 126.084915,
+        "lightDamage": 35,
+        "heavyDamage": 55,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 11.55,
+        "heavyStaminaDamage": 18.150000000000002
+      },
+      "overhead": {
+        "range": 124.34473,
+        "lightDamage": 40,
+        "heavyDamage": 50,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.200000000000001,
+        "heavyStaminaDamage": 16.5
+      },
+      "stab": {
+        "range": 146.89264,
+        "lightDamage": 35,
+        "heavyDamage": 45,
+        "lightWindup": 175,
+        "heavyWindup": 425,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 11.55,
+        "heavyStaminaDamage": 14.850000000000001
+      },
+      "special": {
+        "damage": 60,
+        "windup": 850,
+        "release": 500,
+        "recovery": 1000,
+        "staminaDamage": 19.8
+      },
+      "sprintAttack": {
+        "damage": 60,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 19.8
+      },
+      "throw": {
+        "damage": 55,
+        "windup": 300,
+        "release": 500,
+        "recovery": 300,
+        "staminaDamage": 18.150000000000002
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "throwing_axe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "throwing_mallet",
+    "slug": "throwing-mallet",
+    "name": "Throwing Mallet",
+    "aliases": [
+      "mallet"
+    ],
+    "subclassAccess": [
+      "Devastator"
+    ],
+    "weaponTypes": [
+      "Hammer",
+      "One Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 36.666666666666664,
+      "avgHeavyDamage": 50,
+      "avgRange": 127.68368500000001,
+      "avgSpeed": 325
+    },
+    "attacks": {
+      "slash": {
+        "range": 121.25197,
+        "lightDamage": 35,
+        "heavyDamage": 55,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.125,
+        "heavyStaminaDamage": 20.625
+      },
+      "overhead": {
+        "range": 119.904915,
+        "lightDamage": 40,
+        "heavyDamage": 50,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 18.75
+      },
+      "stab": {
+        "range": 141.89417,
+        "lightDamage": 35,
+        "heavyDamage": 45,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 350,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.125,
+        "heavyStaminaDamage": 16.875
+      },
+      "special": {
+        "damage": 50,
+        "windup": 850,
+        "release": 500,
+        "recovery": 850,
+        "staminaDamage": 18.75
+      },
+      "sprintAttack": {
+        "damage": 50,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 18.75
+      },
+      "throw": {
+        "damage": 45,
+        "windup": 300,
+        "release": 375,
+        "recovery": 300,
+        "staminaDamage": 16.875
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "throwing_mallet",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "two_handed_hammer",
+    "slug": "two-handed-hammer",
+    "name": "Two Handed Hammer",
+    "aliases": [
+      "2 handed hammer",
+      "2h hammer",
+      "2handed hammer",
+      "2hh",
+      "thh"
+    ],
+    "subclassAccess": [
+      "Crusader",
+      "Raider"
+    ],
+    "weaponTypes": [
+      "Hammer",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 41.666666666666664,
+      "avgHeavyDamage": 61.666666666666664,
+      "avgRange": 198.15355666666665,
+      "avgSpeed": 441.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 204.34193,
+        "lightDamage": 40,
+        "heavyDamage": 60,
+        "lightWindup": 275,
+        "heavyWindup": 575,
+        "lightRelease": 525,
+        "heavyRelease": 550,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 15,
+        "heavyStaminaDamage": 22.5
+      },
+      "overhead": {
+        "range": 195.38632,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 325,
+        "heavyWindup": 625,
+        "lightRelease": 500,
+        "heavyRelease": 525,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 18.75,
+        "heavyStaminaDamage": 26.25
+      },
+      "stab": {
+        "range": 194.73242,
+        "lightDamage": 35,
+        "heavyDamage": 55,
+        "lightWindup": 300,
+        "heavyWindup": 550,
+        "lightRelease": 350,
+        "heavyRelease": 400,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 13.125,
+        "heavyStaminaDamage": 20.625
+      },
+      "special": {
+        "damage": 80,
+        "windup": 1100,
+        "release": 500,
+        "recovery": 1300,
+        "staminaDamage": 30
+      },
+      "sprintAttack": {
+        "damage": 70,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 26.25
+      },
+      "throw": {
+        "damage": 50,
+        "windup": 650,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 18.75
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "two_handed_hammer",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "war_axe",
+    "slug": "war-axe",
+    "name": "War Axe",
+    "aliases": [],
+    "subclassAccess": [
+      "Officer"
+    ],
+    "weaponTypes": [
+      "Axe",
+      "Two Handed"
+    ],
+    "damageType": "Chop",
+    "summary": {
+      "avgLightDamage": 48.333333333333336,
+      "avgHeavyDamage": 68.33333333333333,
+      "avgRange": 194.6581,
+      "avgSpeed": 458.5
+    },
+    "attacks": {
+      "slash": {
+        "range": 200.83551,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 325.5,
+        "heavyWindup": 575.5,
+        "lightRelease": 550,
+        "heavyRelease": 600,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1150,
+        "lightStaminaDamage": 16.5,
+        "heavyStaminaDamage": 23.1
+      },
+      "overhead": {
+        "range": 191.93466,
+        "lightDamage": 60,
+        "heavyDamage": 80,
+        "lightWindup": 325,
+        "heavyWindup": 575,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1150,
+        "lightStaminaDamage": 19.8,
+        "heavyStaminaDamage": 26.400000000000002
+      },
+      "stab": {
+        "range": 191.20413,
+        "lightDamage": 35,
+        "heavyDamage": 55,
+        "lightWindup": 350,
+        "heavyWindup": 600,
+        "lightRelease": 400,
+        "heavyRelease": 400,
+        "lightRecovery": 1000,
+        "heavyRecovery": 1150,
+        "lightStaminaDamage": 11.55,
+        "heavyStaminaDamage": 18.150000000000002
+      },
+      "special": {
+        "damage": 90,
+        "windup": 1100,
+        "release": 500,
+        "recovery": 1350,
+        "staminaDamage": 29.700000000000003
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 500,
+        "recovery": 1000,
+        "staminaDamage": 26.400000000000002
+      },
+      "throw": {
+        "damage": 65,
+        "windup": 550,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 21.450000000000003
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "war_axe",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "war_club",
+    "slug": "war-club",
+    "name": "War Club",
+    "aliases": [],
+    "subclassAccess": [
+      "Devastator"
+    ],
+    "weaponTypes": [
+      "Club",
+      "Two Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 36.666666666666664,
+      "avgHeavyDamage": 51.666666666666664,
+      "avgRange": 222.56783,
+      "avgSpeed": 341.6666666666667
+    },
+    "attacks": {
+      "slash": {
+        "range": 230.85042,
+        "lightDamage": 30,
+        "heavyDamage": 50,
+        "lightWindup": 200,
+        "heavyWindup": 400,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 18.75
+      },
+      "overhead": {
+        "range": 214.53116,
+        "lightDamage": 45,
+        "heavyDamage": 60,
+        "lightWindup": 200,
+        "heavyWindup": 400,
+        "lightRelease": 500,
+        "heavyRelease": 525,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 16.875,
+        "heavyStaminaDamage": 22.5
+      },
+      "stab": {
+        "range": 222.32191,
+        "lightDamage": 35,
+        "heavyDamage": 45,
+        "lightWindup": 300,
+        "heavyWindup": 550,
+        "lightRelease": 350,
+        "heavyRelease": 350,
+        "lightRecovery": 800,
+        "heavyRecovery": 950,
+        "lightStaminaDamage": 13.125,
+        "heavyStaminaDamage": 16.875
+      },
+      "special": {
+        "damage": 65,
+        "windup": 850,
+        "release": 500,
+        "recovery": 1100,
+        "staminaDamage": 24.375
+      },
+      "sprintAttack": {
+        "damage": 55,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 20.625
+      },
+      "throw": {
+        "damage": 35,
+        "windup": 650,
+        "release": 500,
+        "recovery": 550,
+        "staminaDamage": 13.125
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "war_club",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  },
+  {
+    "schemaVersion": "weapon-v1",
+    "id": "warhammer",
+    "slug": "warhammer",
+    "name": "Warhammer",
+    "aliases": [
+      "War Hammer"
+    ],
+    "subclassAccess": [
+      "Guardian"
+    ],
+    "weaponTypes": [
+      "Hammer",
+      "One Handed"
+    ],
+    "damageType": "Blunt",
+    "summary": {
+      "avgLightDamage": 41.666666666666664,
+      "avgHeavyDamage": 60,
+      "avgRange": 160.19199666666665,
+      "avgSpeed": 295.8333333333333
+    },
+    "attacks": {
+      "slash": {
+        "range": 155.34613,
+        "lightDamage": 45,
+        "heavyDamage": 65,
+        "lightWindup": 200,
+        "heavyWindup": 375,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 16.875,
+        "heavyStaminaDamage": 24.375
+      },
+      "overhead": {
+        "range": 148.77385,
+        "lightDamage": 50,
+        "heavyDamage": 70,
+        "lightWindup": 150,
+        "heavyWindup": 400,
+        "lightRelease": 500,
+        "heavyRelease": 550,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 18.75,
+        "heavyStaminaDamage": 26.25
+      },
+      "stab": {
+        "range": 176.45601,
+        "lightDamage": 30,
+        "heavyDamage": 45,
+        "lightWindup": 200,
+        "heavyWindup": 450,
+        "lightRelease": 300,
+        "heavyRelease": 300,
+        "lightRecovery": 900,
+        "heavyRecovery": 1050,
+        "lightStaminaDamage": 11.25,
+        "heavyStaminaDamage": 16.875
+      },
+      "special": {
+        "damage": 80,
+        "windup": 1000,
+        "release": 450,
+        "recovery": 1150,
+        "staminaDamage": 30
+      },
+      "sprintAttack": {
+        "damage": 80,
+        "windup": 600,
+        "release": 400,
+        "recovery": 1000,
+        "staminaDamage": 30
+      },
+      "throw": {
+        "damage": 35,
+        "windup": 650,
+        "release": 450,
+        "recovery": 550,
+        "staminaDamage": 13.125
+      }
+    },
+    "source": {
+      "provider": "chivalry2-weapons",
+      "weaponKey": "warhammer",
+      "mappingVersion": "weapon-v1-mapping",
+      "libraryVersion": "1.0.6"
+    }
+  }
+]
