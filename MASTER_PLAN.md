@@ -1,547 +1,481 @@
 # Master Plan
 
-## 1. Role of This Document
+## 1. Purpose
 
-This file is the project's global reference document.
+This file is the strategic source of truth for the project.
 
 It is used to:
-- preserve strategic context across sessions;
-- summarize the project's purpose, scope, constraints, and major workstreams;
-- track macro-level progress;
-- provide a stable base for generating future implementation plans.
+- preserve project context across sessions;
+- capture scope, constraints, decisions, risks, and sequencing;
+- decide what should be planned next;
+- reset context before generating a new implementation plan.
 
-This file must not become a task list or a technical implementation document.
+This file is not:
+- a task list;
+- a backlog;
+- an implementation spec.
 
-## 2. Project Identity
+## 2. Project Snapshot
 
-### Project Name
+### Working Name
 
 TBD.
 
-Current working repository name: `chivalry`.
+Current repository name: `chivalry`.
 
 ### One-Sentence Summary
 
-A website that displays Chivalry 2 weapon statistics in a way that is simple, clear, and still detailed enough to be genuinely useful.
+A website that presents Chivalry 2 weapon statistics in a way that is simple, clear, and still detailed enough to be genuinely useful.
 
-### Problem Being Solved
+### Problem
 
-Chivalry 2 does not provide a simple way to view all weapon statistics in one place. In-game information is too simplified and must be viewed weapon by weapon, while existing third-party resources with detailed stats are often too complex to browse comfortably.
+Chivalry 2 does not provide a simple way to inspect all weapon stats in one place. In-game information is too limited and existing community resources with deeper stats are often too hard to browse.
 
-### Target Users / Audience
+### Audience
 
-Primary audience:
 - the project owner;
-- Chivalry 2 players who want a clear and accessible way to explore weapon statistics.
+- Chivalry 2 players who want a clean and accessible weapon-stat reference.
 
-This is a personal project, not a professional or commercial initiative.
+This is a personal project, not a commercial product.
 
 ### Expected Value
 
-The project should provide a clear and easy-to-use reference for Chivalry 2 weapon statistics, balancing simplicity and useful detail.
+Provide a reference site that players can actually use comfortably when comparing and understanding weapons.
 
-## 3. Vision and Success Criteria
+### Success Looks Like
 
-### Long-Term Vision
+- players use it as a practical reference;
+- the interface is perceived as clear;
+- the stats feel detailed enough to matter;
+- the site earns recognition in the Chivalry 2 community.
 
-The project should become the go-to website for players who want a clean interface to explore Chivalry 2 weapon statistics without dealing with overly simplified in-game views or overly complex community resources.
+### Failure Looks Like
 
-### Success Criteria
+- the data becomes stale and hard to maintain;
+- the UI becomes as confusing as existing alternatives;
+- the site is too shallow to justify its existence.
 
-The project is successful if:
-- players actively use it to inspect weapon statistics;
-- the interface is perceived as clear and easy to navigate;
-- the data is detailed enough to be genuinely useful;
-- the site earns recognition within the Chivalry 2 player community as a good reference.
+## 3. Scope
 
-Examples:
-- product adoption;
-- business impact;
-- quality level;
-- operational stability;
-- user satisfaction.
+### V1 In Scope
 
-### Failure Criteria
+- front-end-only website;
+- public weapon reference built from the current community library;
+- all weapons shown by default on the main page;
+- filtering by subclass, weapon name, and weapon type;
+- sorting by core summary metrics such as damage, range, and speed;
+- simple weapon component for browsing;
+- detailed weapon component for deep inspection;
+- in-place comparison mode between two weapons;
+- derived metrics when they can be computed reliably from source data.
 
-The project is off-track if:
-- the data becomes stale and cannot be maintained with reasonable effort;
-- the interface ends up as confusing as the existing alternatives;
-- the site does not provide enough useful detail to justify its existence.
+### V1 Out of Scope
 
-## 4. Scope
-
-### In Scope
-
-Initial scope includes:
-- a front-end website focused on Chivalry 2 weapon statistics;
-- a complete reference of the weapons covered by the current data source;
-- a main page that shows all weapons by default;
-- filtering by class, weapon name, and weapon type;
-- sorting by key stats such as damage, range, and speed;
-- clear weapon detail views;
-- weapon comparison capabilities;
-- two-weapon comparison through direct selection in the interface;
-- derived values and calculations when they can be reliably produced from the available source data;
-- an interface that stays simple to use while still exposing meaningful detail.
-
-### Out of Scope
-
-Explicitly out of scope for now:
+- public API;
 - advanced analytics;
-- a public API;
-- a back-office in the initial version;
-- admin accounts in the initial version;
-- non-essential product complexity that would make the experience harder to use.
+- back-office;
+- admin accounts;
+- product complexity that hurts clarity.
 
-### Initial Assumptions
+### Catalog Rules For V1
 
-Current assumptions:
-- V1 can be delivered as a front-end-only application;
-- V1 will rely on the existing `chivalry2-weapons` library as its primary source of data;
-- the first useful version is a complete weapon reference site with easy comparison between weapons;
-- the homepage or main page is the core product surface, not a navigation hub;
-- the default browsing experience should expose all weapons immediately;
-- the first browsing controls should focus on class, name, and weapon type;
-- the first sorting controls should focus on damage, range, and speed;
-- filtering and sorting are likely useful, but they must be integrated in a way that does not harm clarity;
-- the project should be designed so that richer data dimensions can be added later, including class-dependent weapon behavior;
-- the project will likely need a database;
-- the project will likely need a back-office or admin workflow to keep data maintainable over time;
-- the existing `chivalry2-weapons` community library can serve as an initial data foundation, even if it is outdated.
+Include only weapons that:
+- belong to at least one subclass.
 
-## 5. Constraints
+Exclude:
+- `Carryable`;
+- `Prop`;
+- `Champion Weapon`;
+- `Fists`.
 
-### Business Constraints
+## 4. Constraints and Principles
 
-Known business constraints:
-- this is a personal project, not a commercial product;
-- success should be measured in usefulness and community adoption, not revenue;
-- scope discipline matters because the project is maintained by one person.
+### Constraints
 
-### Technical Constraints
+- solo personal project;
+- V1 should stay intentionally narrow;
+- long-term maintainability matters because one developer owns the project;
+- current source data is external and may become stale;
+- the source repository is useful but noisy, so raw source objects are not a safe long-term product contract.
 
-Known technical constraints:
-- the initial version is expected to be front-end only;
-- the current data source is an external community library that is already outdated;
-- the amount of available detail is limited by what the current library exposes and by what can be safely derived from it;
-- the project should leave room for a future database and back-office without forcing them into V1.
+### Guiding Principles
 
-### Delivery Constraints
-
-Known constraints:
-- this is a personal project;
-- there is currently a single developer;
-- long-term maintainability matters because the project depends on one person.
-- V1 should stay intentionally narrow and focused.
-
-### Quality Constraints
-
-Known priorities:
-- the interface must remain simple and clear;
-- the information must remain detailed enough to be useful;
-- data maintainability is a critical quality requirement.
-- comparison between weapons should feel straightforward, not hidden behind a complicated UI.
-
-## 6. Guiding Principles
-
-The project should be guided by the following principles:
 - clarity over feature depth;
-- ship a usable reference experience before expanding into a broader platform;
-- keep the first version intentionally front-end focused;
-- design the product so the data source can evolve from a library to a database later;
-- avoid UI complexity even when adding useful browsing, sorting, and comparison features;
-- treat data maintainability as a first-class product concern, not a later afterthought.
+- ship a usable reference experience first;
+- keep V1 front-end focused;
+- design for a future move from library-based data to database-backed data;
+- treat data maintainability as a product concern, not just a technical concern.
 
-## 7. Global Project Stages
+## 5. Source Data Reality
 
-This section defines the major stages of the project at a strategic level.
-These are not implementation plans. They are the macro steps the project must go through.
+Current source: `chivalry2-weapons`.
 
-For each stage, include:
-- objective;
-- why it matters;
-- expected output;
-- completion condition;
-- dependencies.
+What it provides:
+- a curated public export of weapons;
+- structured weapon data for slash, overhead, stab, and some optional attacks;
+- class-target damage-multiplier logic that can later support damage-by-target-type features.
 
-### Stage 1. Foundation and Framing
+What it does not justify yet:
+- direct 1:1 use as the product data model;
+- blind inclusion of every JSON file in the repository;
+- exposing low-level combat tuning fields directly in the UI.
 
-Objective:
-Clarify the project's purpose, scope, constraints, stakeholders, and success criteria.
+Key implications:
+- the project must define its own normalized weapon model;
+- the front end should depend on normalized product data, not raw library objects;
+- future migration to a database should preserve that normalized contract.
 
-Why it matters:
-Without a clear frame, the project could become either too shallow to be useful or too complex for a solo-maintained personal project.
+## 6. Product Model For V1
 
-Expected output:
-A validated project frame and aligned strategic direction.
+### Core Surfaces
 
-Completion condition:
-The project has a clear identity, scope, and decision basis.
+The product has two display surfaces and one shared interaction mode:
+- simple weapon component;
+- detailed weapon component;
+- comparison mode.
 
-Dependencies:
-None. This is the starting stage.
+Comparison mode is not a dedicated page.
 
-### Stage 2. Product Definition
+### Simple Weapon Component
 
-Objective:
-Define the product shape, major capabilities, core user journeys, and value proposition.
+Purpose:
+Fast scanning and sorting on the main page.
 
-Why it matters:
-The success of the project depends heavily on presenting detailed data through a UI that remains clear and approachable.
+Fields:
+- `name`;
+- `subclassAccess`;
+- `weaponTypes`;
+- `damageType`;
+- `avgLightDamage`;
+- `avgHeavyDamage`;
+- `avgRange`;
+- `avgSpeed`.
 
-Expected output:
-A clear product definition at macro level.
+Metric rules:
+- `avgRange` = average of `slash.range`, `overhead.range`, and `stab.range`;
+- `avgSpeed` = average windup across `slash`, `overhead`, and `stab`, using both light and heavy variants.
 
-Completion condition:
-The project has a stable product direction that can be decomposed into concrete initiatives.
+### Detailed Weapon Component
 
-Dependencies:
-Foundation and framing must be sufficiently clear.
+Purpose:
+Deep inspection of a single weapon without losing readability.
 
-### Stage 3. Solution Strategy
+Identity and access:
+- `name`;
+- `aliases` when useful for search;
+- `subclassAccess`;
+- `weaponTypes`;
+- `damageType`.
 
-Objective:
-Determine the high-level approach required to deliver the product, including platform, systems, operations, and governance considerations.
+Summary metrics:
+- `avgLightDamage`;
+- `avgHeavyDamage`;
+- `avgRange`;
+- `avgSpeed`.
 
-Why it matters:
-The project must balance a fast front-end-first approach with a longer-term path toward maintainable data management.
+Core attack groups:
+- `slash`;
+- `overhead`;
+- `stab`.
 
-Expected output:
-A coherent strategic delivery direction.
+For each core attack expose:
+- `range`;
+- `lightDamage`;
+- `heavyDamage`;
+- `lightWindup`;
+- `heavyWindup`;
+- `lightRelease`;
+- `heavyRelease`;
+- `lightRecovery`;
+- `heavyRecovery`;
+- `lightStaminaDamage`;
+- `heavyStaminaDamage`.
 
-Completion condition:
-The project has a defensible global solution path.
+Optional attack groups when present:
+- `special`;
+- `sprintAttack`;
+- `sprintCharge`;
+- `throw`.
 
-Dependencies:
-Product definition must be clear enough to choose an appropriate delivery strategy.
+For optional attacks expose only:
+- `damage`;
+- `windup`;
+- `release`;
+- `recovery`;
+- `staminaDamage`.
 
-### Stage 4. Execution Structuring
+### Comparison Mode
 
-Objective:
-Break the project into major workstreams and identify how they relate to each other.
+Rules:
+- compare exactly two weapons at a time;
+- one weapon acts as the current reference;
+- comparison is applied directly on the visible weapon components;
+- only visible stats are compared in the current mode;
+- there are no comparison-only stats;
+- comparison is visual only: the same stats are shown with positive or negative highlighting.
 
-Why it matters:
-The project needs a stable execution structure so future implementation plans can be generated cleanly without redefining the whole project each time.
+### Hidden In V1
 
-Expected output:
-A portfolio of workstreams ready to be converted into implementation plans.
+Do not expose unless later justified:
+- turn-limit values;
+- `feint`;
+- `thwack`;
+- `hitSuccess`;
+- `blocked`;
+- `worldHit`;
+- `playRate`;
+- `drawStrength`;
+- direction fields;
+- weapon tip check fields;
+- similar low-level combat tuning fields.
 
-Completion condition:
-The project can be organized into execution-ready domains without ambiguity.
+## 7. Global Stages and Order
 
-Dependencies:
-Solution strategy must be clear enough to determine the right workstream boundaries.
+These stages define the macro implementation order.
 
-### Stage 5. Incremental Delivery
+### Stage 1. Strategic Framing
 
-Objective:
-Advance the project through major releases, validations, iterations, and stabilization cycles.
+Goal:
+Lock the project's purpose, scope, constraints, product direction, and workstreams.
 
-Why it matters:
-The product should prove its usefulness early through a public, usable site rather than waiting for a fully mature data platform.
+Exit condition:
+The master plan is good enough to generate the first implementation plan.
 
-Expected output:
-Visible progress toward a usable and valuable product.
+Status:
+Current stage is effectively at the end of this phase.
 
-Completion condition:
-The project reaches the expected level of delivery and readiness.
+### Stage 2. Source Normalization and Product Contract
 
-Dependencies:
-Execution must already be structured into clear workstreams and priorities.
+Goal:
+Turn the current source library into a clean project-owned weapon model and a curated V1 catalog.
 
-### Stage 6. Launch, Operation, and Evolution
+Output:
+- normalized weapon schema;
+- clear catalog rules;
+- source-to-product mapping rules.
 
-Objective:
-Prepare the project for real-world operation, adoption, support, and future growth.
+Exit condition:
+The normalized model is stable enough for front-end implementation.
 
-Why it matters:
-The long-term value of the project depends not only on launch, but on keeping the data current and extending the site responsibly over time.
+Master plan checkpoint:
+Return to this file when the normalized model is validated, then mark the stage complete and decide the next implementation plan.
 
-Expected output:
-A project that can run, be monitored, improved, and extended.
+### Stage 3. V1 Reference Experience
 
-Completion condition:
-The project is operational and has a defined evolution path.
+Goal:
+Build the front-end-only weapon reference experience.
 
-Dependencies:
-The project must already provide a usable reference experience worth operating and extending.
+Output:
+- main page browsing experience;
+- simple weapon component;
+- detailed weapon component;
+- comparison mode;
+- working filters and sorting.
+
+Exit condition:
+The site is usable as a real reference product.
+
+Master plan checkpoint:
+Return to this file when the front-end experience is usable, then decide whether the immediate next plan is stabilization, deployment, or both.
+
+### Stage 4. Public Deployment and Validation
+
+Goal:
+Deploy the site on the VPS and validate that the live product is worth operating.
+
+Output:
+- live public site;
+- basic operational confidence;
+- product feedback from real use.
+
+Exit condition:
+The project is publicly accessible and stable enough to keep iterating.
+
+Master plan checkpoint:
+Return to this file after deployment and initial validation, then decide whether to continue refining V1 or move into longer-term data management work.
+
+### Stage 5. Data Management Evolution
+
+Goal:
+Prepare the project to move beyond direct library dependency.
+
+Output:
+- database direction;
+- migration path from library-based data to database-backed data;
+- future admin and back-office direction.
+
+Exit condition:
+There is a credible long-term data maintenance plan.
+
+Master plan checkpoint:
+Return to this file when the future data model and maintenance workflow become concrete enough to plan implementation.
+
+### Stage 6. Expansion
+
+Goal:
+Extend the project beyond the initial weapon reference.
+
+Likely candidates:
+- class-related data;
+- damage by target type;
+- later domain expansions that still respect clarity.
+
+Exit condition:
+A new product area is mature enough to deserve its own implementation plan.
+
+Master plan checkpoint:
+Return to this file before any major expansion to re-evaluate scope, risks, and sequencing.
 
 ## 8. Major Workstreams
-
-The project currently appears to require the following major workstreams.
 
 ### Workstream: UX and UI
 
 Purpose:
-Define and deliver an interface that makes weapon statistics easy to browse, understand, and compare.
+Make weapon stats easy to browse, understand, and compare.
 
-Scope:
+Includes:
 - information architecture;
-- default all-weapons view;
 - browsing flows;
-- class-based filtering;
-- name search;
-- weapon-type filtering;
-- filtering and sorting patterns;
-- comparison experience;
-- readability and presentation of detailed stats.
+- main-page-first experience;
+- filters and sorting;
+- simple and detailed weapon components;
+- in-place comparison behavior.
 
-Key Questions:
-- what is the best UI pattern for balancing simplicity and depth?
-- how much filtering and sorting can be added without making the product feel heavy?
-- how should comparison be exposed so it feels natural?
-- what should remain visible on the main page versus only on a weapon detail view?
-
-Dependencies:
-- product definition;
-- available shape of the source data.
-
-Completion Condition:
-The project has a clear interface direction that supports browsing and comparison without unnecessary complexity.
-
-### Workstream: Weapon Reference and Comparison Experience
+### Workstream: Weapon Reference Product
 
 Purpose:
-Turn the available weapon data into a coherent public reference product.
+Define the public-facing weapon catalog, visible stat model, and comparison behavior.
 
-Scope:
-- weapon catalog coverage;
-- main-page-first reference experience;
-- weapon detail views;
-- comparison between two weapons through direct selection;
-- comparison logic at product level;
-- derived values that can be computed reliably from available data.
+Includes:
+- V1 catalog curation;
+- summary metrics;
+- detailed stat presentation;
+- decisions about what to show, simplify, or hide.
 
-Key Questions:
-- what is the minimum complete reference experience for V1?
-- which derived values are truly useful and safe to expose?
-- how should future dimensions such as class-dependent damage fit into the product model?
-- which raw library values should be simplified, grouped, or hidden in order to stay readable?
-
-Dependencies:
-- source data quality;
-- UX and UI direction.
-
-Completion Condition:
-The project has a well-defined reference experience that can serve as the first public version.
-
-### Workstream: Data Source and Future Data Management
+### Workstream: Data Source and Normalization
 
 Purpose:
-Make the project viable beyond the initial library-based version by preparing for a more maintainable data workflow.
+Own the product data contract independently of the source library.
 
-Scope:
-- evaluation of the current community library as a starting point;
-- strategy for replacing or extending that source later;
-- future database direction;
-- future admin and back-office direction;
-- long-term data update workflow.
-
-Key Questions:
-- how long can the project rely on the current library?
-- what is the migration path from library-based data to database-backed data?
-- when does a back-office become necessary rather than optional?
-
-Dependencies:
-- understanding of current and future data needs;
-- validation that the front-end reference experience is worth maintaining long term.
-
-Completion Condition:
-The project has a credible long-term path for keeping weapon data current and extensible.
+Includes:
+- normalized weapon model;
+- mapping from source data to product data;
+- future migration path toward a database-backed model.
 
 ### Workstream: Deployment and Public Availability
 
 Purpose:
-Ensure the project can be deployed early and used publicly on the existing VPS.
+Make the product live early on the VPS and keep the operational burden reasonable.
 
-Scope:
-- readiness for public deployment;
-- hosting strategy;
-- operational baseline for a personal project;
-- practical release path from local work to a live site.
+Includes:
+- deployment path;
+- public release readiness;
+- basic live-operation baseline.
 
-Key Questions:
-- what is the earliest point at which the site should go live?
-- what operational baseline is sufficient for a personal but public site?
+## 9. Sequence Logic
 
-Dependencies:
-- a usable first product slice;
-- a solution strategy compatible with early deployment.
+Implementation order:
+1. finish the strategic framing in this file;
+2. define the normalized weapon model and V1 catalog;
+3. build the V1 front-end reference experience on top of that model;
+4. deploy and validate the live site;
+5. design the database/back-office evolution path;
+6. expand into new data domains only after the above is stable.
 
-Completion Condition:
-The project can be published and iterated in a live environment without unnecessary operational burden.
-
-## 9. Global Sequence and Dependencies
-
-Current sequencing logic:
-- first clarify the reference experience and the UI direction, because these shape most downstream decisions;
-- in parallel, explore the current weapon data library to understand what the product can realistically expose in V1;
-- build and validate a front-end-only public reference site before investing heavily in a database or back-office;
-- treat future data management as an official project track, but not as the immediate implementation focus;
-- once the front-end reference site proves useful, define the migration path from library-based data to database-backed data;
-- after the data model and maintenance workflow are clearer, introduce the future admin and back-office layer;
-- expand the project later into richer domains such as classes and damage by target type.
-
-Key dependency logic:
-- UX and UI is the most critical workstream because the project's value depends on clarity;
-- data exploration must happen early because source limitations directly affect product shape;
-- back-office and admin capabilities should not drive V1, but the architecture should avoid blocking them later;
-- long-term project risk is dominated by data freshness and updateability.
+Parallelism rules:
+- UI direction and source-data exploration can progress together early;
+- back-office thinking belongs in the master plan now, but not in immediate V1 implementation;
+- deployment preparation can start before V1 is perfect, but only after the reference experience is clearly useful.
 
 ## 10. Risks, Unknowns, and Decision Gates
 
 ### Major Risks
 
-Known major risks:
-- obtaining reliable weapon statistics;
-- keeping weapon statistics up to date over time;
-- depending too heavily on an external community-maintained library that is already outdated.
+- the source library becomes too outdated to trust;
+- the product becomes coupled to a noisy source schema;
+- the UI becomes too dense and loses its core advantage;
+- long-term data updates become too manual to sustain.
 
-### Unknowns
+### Current Unknowns
 
-Current unknowns:
-- the final project name;
-- the best long-term process for updating weapon statistics;
-- whether a database and back-office are both necessary immediately, or only later;
-- the right UI pattern for browsing, filtering, sorting, and comparing weapons without making the site feel complex;
-- which future data domains should be supported after weapons, and in what order.
+- final project name;
+- exact normalized schema details;
+- best long-term update workflow for weapon data;
+- exact point at which a database becomes necessary;
+- order of future expansions after weapons.
 
 ### Decision Gates
 
-Key decision gates:
-- decide when the current library is no longer sufficient as the primary data source;
-- decide when to move from a front-end-only product to a database-backed product;
-- decide when a back-office becomes necessary enough to justify the added complexity;
-- decide the order of post-weapon expansion, starting with likely candidates such as classes and damage by target type.
+- when to stop relying on the current library as primary source;
+- when to introduce a database;
+- when to introduce a back-office;
+- when to expand beyond the initial weapon reference.
 
 ## 11. Structural Decisions
 
-### Decision: Start With a Front-End-Only V1
+Validated decisions:
+- V1 is front-end only;
+- future database-backed data management is part of the long-term plan;
+- the main page is the primary product surface;
+- comparison happens in-place, not on a separate page;
+- subclass access is the primary availability signal in the UI;
+- the project uses a normalized internal product model instead of the raw library schema;
+- homepage summary metrics stay simplified and are derived from core attack data.
 
-Date:
-2026-03-31
+## 12. Progress and Next Planning Candidates
 
-Status:
-Validated
+### Stage Progress
 
-Context:
-The project needs to prove usefulness quickly, while keeping scope controlled for a solo developer.
+- Stage 1. Strategic framing: complete enough to proceed
+- Stage 2. Source normalization and product contract: next
+- Stage 3. V1 reference experience: pending
+- Stage 4. Public deployment and validation: pending
+- Stage 5. Data management evolution: pending
+- Stage 6. Expansion: pending
 
-Decision:
-The initial version will be a front-end-only application built on top of the existing community weapon library.
+### Next Planning Candidates
 
-Impact:
-This keeps the first execution phase lean, while requiring the product to stay adaptable to a future database-backed model.
+- normalized weapon schema;
+- V1 catalog normalization rules;
+- front-end component architecture for simple/detailed/comparison modes.
 
-### Decision: Treat Future Data Management as Part of the Master Plan
-
-Date:
-2026-03-31
-
-Status:
-Validated
-
-Context:
-The project's main long-term risk is stale data, so future maintainability cannot be ignored even if it is not part of V1.
-
-Decision:
-Database-backed data management and a future back-office are official parts of the long-term project plan.
-
-Impact:
-The architecture and product model should avoid dead ends, even while the first implementation remains front-end focused.
-
-### Decision: Prioritize Clarity Over Feature Depth
-
-Date:
-2026-03-31
-
-Status:
-Validated
-
-Context:
-The core opportunity of the project is to make detailed weapon statistics easier to use than existing resources.
-
-Decision:
-Clarity takes priority over adding more features or more UI density.
-
-Impact:
-Feature selection, browsing patterns, and comparison workflows must all be judged primarily through usability and readability.
-
-### Decision: Make the Main Page the Primary Product Surface
-
-Date:
-2026-03-31
-
-Status:
-Validated
-
-Context:
-The core value of the site is immediate access to weapon statistics, not deep navigation across multiple sections.
-
-Decision:
-The main page will be the primary surface of the product, showing all weapons by default and supporting browsing, filtering, sorting, and entry into comparison.
-
-Impact:
-The site should avoid unnecessary hub navigation and keep the core experience centered on direct access to weapon data.
-
-### Decision: Default to an All-Weapons Browsing Experience
-
-Date:
-2026-03-31
-
-Status:
-Validated
-
-Context:
-The site should feel immediately useful without requiring the user to navigate through menus or select an entry point first.
-
-Decision:
-The default experience will show all weapons, with lightweight controls for filtering by class, name, and weapon type, plus sorting by major stats such as damage, range, and speed.
-
-Impact:
-The information architecture should remain flat and direct, with the main page acting as the primary discovery and comparison surface.
-
-## 12. Global Progress
-
-- Foundation and framing: in progress
-- Product definition: in progress
-- Solution strategy: in progress
-- Execution structuring: in progress
-- Incremental delivery: not started
-- Launch, operation, and evolution: not started
-
-## 13. Next Planning Candidates
-
-- UX and UI exploration;
-- weapon reference and comparison experience;
-- source library exploration and data-shape assessment.
-
-## 14. Session Reset Summary
-
-This section should remain short and be updated over time.
-It exists to help restart a session quickly.
+## 13. Session Reset Summary
 
 ### Current State
 
-The project has just started. The repository exists, the master planning document is in place, and the first layer of strategic framing has been defined.
+The strategic foundation is in place. The source library has been audited at a high level. The next real implementation work is to formalize the normalized weapon model and V1 catalog contract.
 
 ### Current Focus
 
-Define the UI direction, validate the front-end reference experience, and understand the limits of the current weapon data source.
+Move from strategy into Stage 2 by defining the normalized product-facing weapon model.
 
 ### Next High-Level Question
 
-What exact data model and stat presentation can be supported by the current source library without making the interface confusing?
+What exact normalized schema should the project use to map source-library weapon data into simple, detailed, and comparison-ready front-end data?
 
 ### Last Updated
 
 2026-03-31
 
-## 15. Usage Rules
+## 14. Operating Rules
 
-Rules for maintaining this file:
-- keep it strategic, not tactical;
-- do not add fine-grained implementation tasks;
-- prefer stable categories over temporary details;
-- update decisions, risks, and progress when the project changes;
-- use this file at the start of each session before generating detailed plans.
+### How This File Is Used
+
+At the start of each session:
+1. read this file;
+2. confirm the current stage;
+3. decide whether the next action is a new implementation plan or a master-plan update.
+
+After each implementation plan is completed:
+1. return to this file;
+2. update stage progress;
+3. record any structural decision change;
+4. decide the next stage or next implementation plan.
+
+### Maintenance Rules
+
+- keep this file strategic;
+- do not add fine-grained implementation tasks here;
+- update it when a structural decision changes;
+- update it when a stage is completed or re-scoped;
+- prefer stable project language over temporary execution details.
