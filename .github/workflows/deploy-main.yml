@@ -72,7 +72,7 @@ jobs:
       - name: Sync Repository To VPS
         run: |
           rsync -az --delete \
-            -e "ssh -F ~/.ssh/config" \
+            -e "ssh -F $HOME/.ssh/config" \
             --exclude '.git' \
             --exclude 'node_modules' \
             --exclude '.next' \
