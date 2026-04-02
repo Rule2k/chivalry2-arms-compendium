@@ -1,0 +1,133 @@
+.ui-button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ui-button--filter,
+.ui-button--duel,
+.ui-button--clear {
+  border-radius: 1px;
+  text-transform: uppercase;
+}
+
+.ui-button--filter,
+.ui-button--duel {
+  border: 2px solid var(--border-gold);
+  background: var(--royal-cream);
+  color: var(--royal-blue);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.ui-button--filter {
+  padding: 5px 12px;
+  letter-spacing: 0.05em;
+}
+
+.ui-button--duel {
+  padding: 7px 12px;
+  font-weight: 700;
+}
+
+.ui-button--clear {
+  border: 1px solid var(--border-gold);
+  background: transparent;
+  color: var(--crimson);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 3px 14px;
+}
+
+.ui-button--filter:hover,
+.ui-button--filter.ui-button--active {
+  background: var(--royal-blue);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+.ui-button--duel:hover {
+  background: var(--royal-blue);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+.ui-button--duel.ui-button--active-left {
+  background: var(--gold);
+  border-color: var(--gold-bright);
+  color: var(--ink);
+}
+
+.ui-button--duel.ui-button--active-right {
+  background: var(--royal-blue);
+  border-color: var(--royal-blue-light);
+  color: var(--gold-bright);
+}
+
+.ui-button--clear:hover {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: #fff;
+}
+
+.ui-damage-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1px;
+  color: #fff;
+  letter-spacing: 0.12em;
+  padding: 3px 12px;
+  text-transform: uppercase;
+}
+
+.ui-damage-badge--Cut {
+  background: var(--color-cut);
+}
+
+.ui-damage-badge--Chop {
+  background: var(--color-chop);
+}
+
+.ui-damage-badge--Blunt {
+  background: var(--color-blunt);
+}
+
+.ui-stat-bar {
+  overflow: hidden;
+  border: 1px solid rgba(184, 144, 64, 0.3);
+  border-radius: 1px;
+  background: var(--ivory);
+}
+
+.ui-stat-bar--compact {
+  height: 8px;
+}
+
+.ui-stat-bar--standard {
+  height: 10px;
+}
+
+.ui-stat-bar--left {
+  direction: rtl;
+}
+
+.ui-stat-bar__fill {
+  height: 100%;
+  border-radius: 1px;
+  background: var(--royal-blue);
+  transition:
+    width 0.5s ease,
+    background 0.3s ease;
+}
+
+.ui-stat-bar__fill--winner {
+  background: var(--gold);
+}
+
+.ui-stat-bar__fill--loser {
+  background: var(--royal-blue);
+}

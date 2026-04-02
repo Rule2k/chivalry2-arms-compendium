@@ -1,0 +1,24 @@
+@import "@fontsource/alegreya/400.css";
+@import "@fontsource/alegreya/500.css";
+@import "@fontsource/alegreya/700.css";
+@import "@fontsource/cormorant-garamond/600.css";
+@import "@fontsource/cormorant-garamond/700.css";
+@import "@fontsource/cormorant-garamond/600-italic.css";
+@import "@fontsource/cormorant-sc/600.css";
+
+:root {
+  --ivory: #f4f0e8;
+  --royal-cream: #faf6ee;
+  --royal-blue: #1a3a6a;
+  --royal-blue-light: #2a5a8a;
+  --gold: #c4a020;
+  --gold-bright: #d4b430;
+  --crimson: #8a1a2a;
+  --border-gold: #b89040;
+  --ink: #1a1410;
+  --color-cut: #8a1a2a;
+  --color-chop: #1a3a6a;
+  --color-blunt: #5a3a1a;
+  --win-green: #2a6a3a;
+  --lose-red: #8a2a2a;
+}

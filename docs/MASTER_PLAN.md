@@ -293,6 +293,9 @@ The site is usable as a real reference product.
 Master plan checkpoint:
 Return to this file when the front-end experience is usable, then decide whether the immediate next plan is stabilization, deployment, or both.
 
+Status:
+Stage 3 is now in active implementation. The repository contains a real Next.js homepage experience wired to the normalized V1 catalog, but the full V1 reference surface is not complete yet.
+
 ### Stage 4. Public Deployment and Validation
 
 Goal:
@@ -414,8 +417,9 @@ Parallelism rules:
 ### Current Unknowns
 
 - final project name;
-- exact normalized schema details;
+- final shape of the detailed weapon-inspection surface;
 - best long-term update workflow for weapon data;
+- exact stabilization scope required before public deployment;
 - exact point at which a database becomes necessary;
 - order of future expansions after weapons.
 
@@ -439,7 +443,8 @@ Validated decisions:
 - generated normalized datasets are useful development and validation artifacts now, and may later serve as snapshots, fixtures, regression references, or export projections even after the project adopts a database;
 - the current catalog build script is the first form of the ingestion pipeline and may later evolve into a database import, sync, or validation script rather than being discarded;
 - homepage summary metrics stay simplified and are derived from core attack data;
-- homepage design direction is validated: `prototypes/homepage-designs-v2/71-arms-compendium-codex.html` is the chosen reference prototype.
+- homepage design direction is validated: `prototypes/homepage-designs-v2/71-arms-compendium-codex.html` is the chosen reference prototype;
+- the Stage 3 front-end implementation is now anchored on a Next.js App Router application that consumes the generated normalized catalog directly and keeps homepage comparison and filtering as client-side interactions.
 
 ### Homepage Design Direction
 
@@ -459,30 +464,30 @@ The chosen design emerged from 7 waves of iterative prototyping (71 designs tota
 
 - Stage 1. Strategic framing: complete
 - Stage 2. Source normalization and product contract: complete
-- Stage 3. V1 reference experience: current stage — homepage design validated, front-end implementation not yet started in the repository
+- Stage 3. V1 reference experience: current stage — homepage implementation is underway, the catalog-driven browsing and comparison foundation exists, but the full V1 reference surface is not complete yet
 - Stage 4. Public deployment and validation: pending
 - Stage 5. Data management evolution: pending
 - Stage 6. Expansion: pending
 
 ### Next Planning Candidates
 
-- front-end application scaffold and component architecture translating the validated prototype into real Next.js components.
-- main page implementation on top of the normalized V1 catalog.
-- comparison-mode interaction design on top of the normalized model.
+- complete the remaining V1 product surfaces, especially the detailed weapon inspection experience.
+- finish the full browsing contract for V1, especially any missing filter dimensions beyond the current name and class/subclass controls.
+- stabilize the Stage 3 implementation with stronger regression coverage and deployment-readiness checks.
 
 ## 13. Session Reset Summary
 
 ### Current State
 
-Stages 1 and 2 are complete. Stage 3 is the active strategic stage, but the repository still contains Stage 2 contract, normalization, and generated-catalog artifacts plus the validated homepage prototype. The chosen prototype is `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`. The next step is to begin the real Next.js front-end implementation on top of the normalized catalog.
+Stages 1 and 2 are complete. Stage 3 is the active strategic stage and is now materially in progress in the repository: there is a real Next.js homepage wired to the normalized V1 catalog, with search, class/subclass browsing, sorting, and in-place comparison built on top of the validated prototype direction. The chosen prototype remains `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`, and the next step is to complete the missing V1 reference surfaces and stabilize the experience.
 
 ### Current Focus
 
-Start the V1 front-end reference experience: scaffold the real Next.js application, translate the validated homepage prototype into components, wire them to the normalized V1 weapon catalog, and deliver a working main page with browsing, filtering, sorting, and in-place comparison.
+Complete and harden the V1 front-end reference experience: keep the homepage implementation aligned with the normalized catalog, add the remaining product surface area still missing from V1, and raise test and deployment confidence until the site is usable as a real public reference.
 
 ### Next High-Level Question
 
-What front-end application and component architecture should translate the validated prototype into real Next.js components on top of the normalized catalog?
+What is the minimum remaining Stage 3 scope required to turn the current homepage foundation into a fully usable V1 reference product?
 
 ### Last Updated
 

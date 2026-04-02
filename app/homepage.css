@@ -1,0 +1,111 @@
+.comparison-zone {
+  position: relative;
+  overflow: hidden;
+  border: 4px double var(--gold);
+  background: linear-gradient(
+    135deg,
+    rgba(196, 160, 32, 0.03),
+    rgba(26, 58, 106, 0.02)
+  );
+}
+
+.comparison-zone::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(184, 144, 64, 0.3);
+  pointer-events: none;
+}
+
+.panel-shell {
+  min-height: 150px;
+  transition: all 0.3s ease;
+}
+
+.panel-empty {
+  color: var(--royal-blue-light);
+  font-style: italic;
+}
+
+.comparison-value--winner {
+  color: var(--win-green);
+}
+
+.comparison-value--loser {
+  color: var(--lose-red);
+}
+
+.controls-shell {
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  background: linear-gradient(
+    135deg,
+    rgba(196, 160, 32, 0.06),
+    rgba(26, 58, 106, 0.04)
+  );
+}
+
+.search-input,
+.sort-select {
+  outline: none;
+}
+
+.search-input:focus,
+.sort-select:focus {
+  border-color: var(--gold-bright);
+  box-shadow: 0 0 0 2px rgba(196, 160, 32, 0.2);
+}
+
+.sort-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%231a3a6a'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.weapon-card {
+  overflow: hidden;
+  border: 1px solid rgba(196, 160, 32, 0.3);
+  background: #fdfaf3;
+  transition: all 0.3s ease;
+}
+
+.weapon-card:hover {
+  border-color: var(--gold-bright);
+  background: #fdf8eb;
+  box-shadow: 0 2px 12px rgba(196, 160, 32, 0.12);
+}
+
+.weapon-card:hover .ui-stat-bar__fill {
+  background: var(--gold);
+}
+
+.weapon-card--selected-left {
+  border-color: var(--gold-bright);
+  background: rgba(196, 160, 32, 0.06);
+  box-shadow: 0 0 0 2px rgba(196, 160, 32, 0.15);
+}
+
+.weapon-card--selected-right {
+  border-color: var(--royal-blue);
+  background: rgba(26, 58, 106, 0.04);
+  box-shadow: 0 0 0 2px rgba(26, 58, 106, 0.12);
+}
+
+.weapon-card--selected-left.weapon-card--selected-right {
+  border-color: var(--gold-bright);
+  background: rgba(196, 160, 32, 0.08);
+  box-shadow: 0 0 0 2px rgba(196, 160, 32, 0.2);
+}
+
+.card-rule {
+  height: 1px;
+  width: 60%;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-gold),
+    transparent
+  );
+}

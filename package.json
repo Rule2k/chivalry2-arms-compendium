@@ -3,17 +3,46 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "build:weapons": "tsx scripts/build-weapons-catalog.ts",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run && playwright test",
+    "test:unit": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@eslint/js": "^9.38.0",
     "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
     "ajv": "^8.18.0",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0",
+    "jsdom": "^29.0.1",
     "json-schema-to-ts": "^3.1.1",
     "tsx": "^4.21.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.46.1",
+    "vitest": "^4.1.2"
   },
   "dependencies": {
-    "chivalry2-weapons": "^1.0.6"
+    "@fontsource/alegreya": "^5.2.8",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/cormorant-sc": "^5.2.8",
+    "@tailwindcss/postcss": "^4.2.2",
+    "chivalry2-weapons": "^1.0.6",
+    "next": "^16.2.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2"
   }
 }

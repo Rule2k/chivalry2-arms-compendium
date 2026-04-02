@@ -1,6 +1,11 @@
 node_modules/
 dist/
 coverage/
+.next/
+e2e/result/
+playwright-report/
+test-results/
+*.tsbuildinfo
 *.log
 .DS_Store
 .superpowers

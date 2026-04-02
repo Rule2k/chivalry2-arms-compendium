@@ -1,6 +1,6 @@
 import Ajv2020 from "ajv/dist/2020";
 
-import { weaponV1Schema } from "../../../../contracts/weapon-v1.schema";
+import { weaponV1Schema } from "@contracts/weapon-v1.schema";
 import type { WeaponRecordV1 } from "./weapon.types";
 
 const ajv = new Ajv2020({

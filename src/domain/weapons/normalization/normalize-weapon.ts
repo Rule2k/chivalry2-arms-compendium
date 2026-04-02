@@ -73,7 +73,7 @@ const requireCoreAttack = (
     );
   }
 
-  return attack as Chivalry2RawCoreAttack;
+  return attack;
 };
 
 const mapOptionalAttacks = (
@@ -83,13 +83,13 @@ const mapOptionalAttacks = (
     (accumulator, attackName) => {
       const attack = entry.weapon.attacks[attackName];
 
-      if (!attack || !isValidOptionalAttack(attack as Chivalry2RawOptionalAttack)) {
+      if (!attack || !isValidOptionalAttack(attack)) {
         return accumulator;
       }
 
       return {
         ...accumulator,
-        [attackName]: mapOptionalAttack(attack as Chivalry2RawOptionalAttack),
+        [attackName]: mapOptionalAttack(attack),
       };
     },
     {},
