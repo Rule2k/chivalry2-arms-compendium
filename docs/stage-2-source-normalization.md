@@ -206,4 +206,4 @@ Later it can evolve to:
 - validate that stored records still conform to the product contract;
 - emit product-facing exports or reports.
 
-The next implementation step after these artifacts is to review whether the normalized model is now stable enough to close Stage 2 or whether more mapping refinement is needed first.
+That review is now complete: the normalized model is considered stable enough to close Stage 2. The next implementation step is to start Stage 3 by building the real front-end on top of the generated V1 catalog and the validated homepage prototype.

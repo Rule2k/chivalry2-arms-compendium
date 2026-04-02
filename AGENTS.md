@@ -18,7 +18,7 @@
 
 ## Current Stage
 
-- Stage 2: Source Normalization and Product Contract
+- Stage 3: V1 Reference Experience
 
 ## Current Technical Direction
 
@@ -28,3 +28,4 @@
 - Normalization helpers: `src/domain/weapons/normalization/normalization.ts`
 - Source ingestion: `src/domain/weapons/source/chivalry2-source.ts`
 - Catalog generation script: `scripts/build-weapons-catalog.ts`
+- Validated homepage prototype reference: `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`

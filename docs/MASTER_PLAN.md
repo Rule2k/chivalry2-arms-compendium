@@ -459,14 +459,14 @@ The chosen design emerged from 7 waves of iterative prototyping (71 designs tota
 
 - Stage 1. Strategic framing: complete
 - Stage 2. Source normalization and product contract: complete
-- Stage 3. V1 reference experience: in progress — homepage design validated, implementation next
+- Stage 3. V1 reference experience: current stage — homepage design validated, front-end implementation not yet started in the repository
 - Stage 4. Public deployment and validation: pending
 - Stage 5. Data management evolution: pending
 - Stage 6. Expansion: pending
 
 ### Next Planning Candidates
 
-- front-end component architecture translating the validated prototype into real Next.js components.
+- front-end application scaffold and component architecture translating the validated prototype into real Next.js components.
 - main page implementation on top of the normalized V1 catalog.
 - comparison-mode interaction design on top of the normalized model.
 
@@ -474,19 +474,19 @@ The chosen design emerged from 7 waves of iterative prototyping (71 designs tota
 
 ### Current State
 
-Stages 1 and 2 are complete. The homepage design direction is validated through iterative prototyping — the chosen prototype is `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`. The next step is translating this prototype into the real Next.js front-end.
+Stages 1 and 2 are complete. Stage 3 is the active strategic stage, but the repository still contains Stage 2 contract, normalization, and generated-catalog artifacts plus the validated homepage prototype. The chosen prototype is `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`. The next step is to begin the real Next.js front-end implementation on top of the normalized catalog.
 
 ### Current Focus
 
-Implement the V1 front-end reference experience: translate the validated homepage prototype into Next.js components, wire them to the normalized V1 weapon catalog, and deliver a working main page with browsing, filtering, sorting, and in-place comparison.
+Start the V1 front-end reference experience: scaffold the real Next.js application, translate the validated homepage prototype into components, wire them to the normalized V1 weapon catalog, and deliver a working main page with browsing, filtering, sorting, and in-place comparison.
 
 ### Next High-Level Question
 
-What front-end component architecture should translate the validated prototype into real Next.js components on top of the normalized catalog?
+What front-end application and component architecture should translate the validated prototype into real Next.js components on top of the normalized catalog?
 
 ### Last Updated
 
-2026-04-01
+2026-04-02
 
 ## 14. Operating Rules
 
