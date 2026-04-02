@@ -36,7 +36,13 @@ export type WeaponHomepageEntry = Pick<
   weaponTypesLabel: string;
 };
 
-export type HomepageMetricMaximums = Record<HomepageMetricKey, number>;
+export type HomepageMetricBounds = Record<
+  HomepageMetricKey,
+  {
+    max: number;
+    min: number;
+  }
+>;
 
 export type HomepageComparisonMetric = {
   key: HomepageMetricKey;

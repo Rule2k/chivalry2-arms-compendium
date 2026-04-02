@@ -4,7 +4,7 @@ import type {
   HomepageComparisonRow,
   HomepageComparisonSelection,
   HomepageComparisonSlot,
-  HomepageMetricMaximums,
+  HomepageMetricBounds,
   WeaponHomepageEntry,
 } from "./homepage.types";
 
@@ -72,7 +72,7 @@ const getComparisonState = (
 export const buildComparisonRows = (
   leftWeapon: WeaponHomepageEntry | null,
   rightWeapon: WeaponHomepageEntry | null,
-  maximums: HomepageMetricMaximums,
+  metricBounds: HomepageMetricBounds,
 ): HomepageComparisonRow[] => {
   if (!leftWeapon || !rightWeapon) {
     return [];
@@ -91,10 +91,18 @@ export const buildComparisonRows = (
       key: metric.key,
       label: metric.label,
       lowerIsBetter: metric.lowerIsBetter,
-      leftPercent: getMetricPercent(leftValue, maximums[metric.key]),
+      leftPercent: getMetricPercent(
+        leftValue,
+        metricBounds[metric.key],
+        metric.lowerIsBetter,
+      ),
       leftState: states.leftState,
       leftValue,
-      rightPercent: getMetricPercent(rightValue, maximums[metric.key]),
+      rightPercent: getMetricPercent(
+        rightValue,
+        metricBounds[metric.key],
+        metric.lowerIsBetter,
+      ),
       rightState: states.rightState,
       rightValue,
     };

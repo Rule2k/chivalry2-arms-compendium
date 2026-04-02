@@ -12,7 +12,7 @@ export {
 export {
   createWeaponHomepageEntries,
   filterHomepageEntries,
-  getSummaryMetricMaximums,
+  getSummaryMetricBounds,
   getVisibleSubclassOptions,
   getWeaponById,
   sortHomepageEntries,

@@ -4,8 +4,8 @@ import {
 } from "@/features/homepage/model/homepage.model";
 import type {
   HomepageComparisonSlot,
+  HomepageMetricBounds,
   HomepageMetricKey,
-  HomepageMetricMaximums,
   WeaponHomepageEntry,
 } from "@/features/homepage/model/homepage.types";
 import { Button } from "@/common/components/button";
@@ -16,7 +16,7 @@ import { joinClassNames } from "@/common/utils/classnames";
 type WeaponCardProps = {
   isLeftSelected: boolean;
   isRightSelected: boolean;
-  maximums: HomepageMetricMaximums;
+  metricBounds: HomepageMetricBounds;
   onAssign: (slot: HomepageComparisonSlot, weaponId: string) => void;
   weapon: WeaponHomepageEntry;
 };
@@ -31,7 +31,7 @@ const WEAPON_CARD_METRICS: Array<{ key: HomepageMetricKey; label: string }> = [
 export const WeaponCard = ({
   isLeftSelected,
   isRightSelected,
-  maximums,
+  metricBounds,
   onAssign,
   weapon,
 }: WeaponCardProps) => {
@@ -56,7 +56,7 @@ export const WeaponCard = ({
       <div className="flex w-full flex-col gap-2">
         {WEAPON_CARD_METRICS.map((metric) => {
           const metricValue = weapon.summary[metric.key];
-          const width = getMetricBarWidth(metricValue, metric.key, maximums);
+          const width = getMetricBarWidth(metricValue, metric.key, metricBounds);
 
           return (
             <div className="flex items-center gap-2" key={metric.key}>

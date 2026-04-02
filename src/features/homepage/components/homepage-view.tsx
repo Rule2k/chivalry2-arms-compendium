@@ -7,7 +7,7 @@ import {
   buildComparisonRows,
   clearComparisonSlot,
   filterHomepageEntries,
-  getSummaryMetricMaximums,
+  getSummaryMetricBounds,
   getWeaponById,
   sortHomepageEntries,
 } from "@/features/homepage/model/homepage.model";
@@ -43,7 +43,7 @@ export const HomepageView = ({ weapons }: HomepageViewProps) => {
     rightWeaponId: null,
   });
 
-  const maximums = getSummaryMetricMaximums(weapons);
+  const metricBounds = getSummaryMetricBounds(weapons);
   const filteredWeapons = filterHomepageEntries(weapons, {
     activeClass,
     activeSubclass,
@@ -52,7 +52,7 @@ export const HomepageView = ({ weapons }: HomepageViewProps) => {
   const visibleWeapons = sortHomepageEntries(filteredWeapons, sortKey);
   const leftWeapon = getWeaponById(weapons, selection.leftWeaponId);
   const rightWeapon = getWeaponById(weapons, selection.rightWeaponId);
-  const comparisonRows = buildComparisonRows(leftWeapon, rightWeapon, maximums);
+  const comparisonRows = buildComparisonRows(leftWeapon, rightWeapon, metricBounds);
 
   const handleClassChange = (value: HomepageClassKey) => {
     setActiveClass(value);
@@ -109,7 +109,7 @@ export const HomepageView = ({ weapons }: HomepageViewProps) => {
                   isLeftSelected={selection.leftWeaponId === weapon.id}
                   isRightSelected={selection.rightWeaponId === weapon.id}
                   key={weapon.id}
-                  maximums={maximums}
+                  metricBounds={metricBounds}
                   onAssign={handleAssign}
                   weapon={weapon}
                 />

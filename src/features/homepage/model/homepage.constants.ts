@@ -1,6 +1,7 @@
 import type {
   HomepageClassKey,
   HomepageComparisonMetric,
+  HomepageMetricKey,
   HomepageSortKey,
 } from "./homepage.types";
 
@@ -39,3 +40,10 @@ export const HOMEPAGE_COMPARISON_METRICS: HomepageComparisonMetric[] = [
   { key: "avgRange", label: "Range", lowerIsBetter: false },
   { key: "avgSpeed", label: "Speed", lowerIsBetter: true },
 ];
+
+export const isLowerBetterMetric = (metricKey: HomepageMetricKey): boolean => {
+  return (
+    HOMEPAGE_COMPARISON_METRICS.find((metric) => metric.key === metricKey)
+      ?.lowerIsBetter ?? false
+  );
+};

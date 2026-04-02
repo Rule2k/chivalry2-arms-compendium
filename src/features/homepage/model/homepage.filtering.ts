@@ -4,11 +4,12 @@ import { HOMEPAGE_CLASS_HIERARCHY } from "./homepage.constants";
 import type {
   HomepageClassKey,
   HomepageFilterState,
-  HomepageMetricMaximums,
+  HomepageMetricBounds,
   HomepageMetricKey,
   HomepageSortKey,
   WeaponHomepageEntry,
 } from "./homepage.types";
+import { isLowerBetterMetric } from "./homepage.constants";
 
 export const createWeaponHomepageEntries = (
   weapons: WeaponRecordV1[],
@@ -36,14 +37,25 @@ export const getVisibleSubclassOptions = (
   return [...HOMEPAGE_CLASS_HIERARCHY[activeClass]];
 };
 
-export const getSummaryMetricMaximums = (
-  weapons: WeaponHomepageEntry[],
-): HomepageMetricMaximums => {
+const getMetricBounds = (values: number[]): { max: number; min: number } => {
   return {
-    avgHeavyDamage: Math.max(...weapons.map((weapon) => weapon.summary.avgHeavyDamage)),
-    avgLightDamage: Math.max(...weapons.map((weapon) => weapon.summary.avgLightDamage)),
-    avgRange: Math.max(...weapons.map((weapon) => weapon.summary.avgRange)),
-    avgSpeed: Math.max(...weapons.map((weapon) => weapon.summary.avgSpeed)),
+    max: Math.max(...values),
+    min: Math.min(...values),
+  };
+};
+
+export const getSummaryMetricBounds = (
+  weapons: WeaponHomepageEntry[],
+): HomepageMetricBounds => {
+  return {
+    avgHeavyDamage: getMetricBounds(
+      weapons.map((weapon) => weapon.summary.avgHeavyDamage),
+    ),
+    avgLightDamage: getMetricBounds(
+      weapons.map((weapon) => weapon.summary.avgLightDamage),
+    ),
+    avgRange: getMetricBounds(weapons.map((weapon) => weapon.summary.avgRange)),
+    avgSpeed: getMetricBounds(weapons.map((weapon) => weapon.summary.avgSpeed)),
   };
 };
 
@@ -83,7 +95,7 @@ const compareMetricValues = (
   rightValue: number,
   metricKey: HomepageMetricKey,
 ): number => {
-  if (metricKey === "avgSpeed") {
+  if (isLowerBetterMetric(metricKey)) {
     return leftValue - rightValue;
   }
 

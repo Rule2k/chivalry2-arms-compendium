@@ -1,14 +1,26 @@
 import type {
+  HomepageMetricBounds,
   HomepageMetricKey,
-  HomepageMetricMaximums,
 } from "./homepage.types";
+import { isLowerBetterMetric } from "./homepage.constants";
 
-const roundPercent = (value: number, maxValue: number): number => {
-  if (maxValue <= 0) {
+const roundPercent = (
+  value: number,
+  bounds: { max: number; min: number },
+  lowerIsBetter: boolean,
+): number => {
+  if (bounds.max <= bounds.min) {
+    return 100;
+  }
+
+  const normalizedValue = (value - bounds.min) / (bounds.max - bounds.min);
+  const percent = lowerIsBetter ? (1 - normalizedValue) * 100 : normalizedValue * 100;
+
+  if (!Number.isFinite(percent)) {
     return 0;
   }
 
-  return Math.round((value / maxValue) * 100);
+  return Math.max(0, Math.min(100, Math.round(percent)));
 };
 
 export const formatMetricValue = (value: number): string => {
@@ -21,11 +33,19 @@ export const formatMetricValue = (value: number): string => {
 export const getMetricBarWidth = (
   value: number,
   metricKey: HomepageMetricKey,
-  maximums: HomepageMetricMaximums,
+  metricBounds: HomepageMetricBounds,
 ): number => {
-  return roundPercent(value, maximums[metricKey]);
+  return roundPercent(
+    value,
+    metricBounds[metricKey],
+    isLowerBetterMetric(metricKey),
+  );
 };
 
-export const getMetricPercent = (value: number, maxValue: number): number => {
-  return roundPercent(value, maxValue);
+export const getMetricPercent = (
+  value: number,
+  bounds: { max: number; min: number },
+  lowerIsBetter = false,
+): number => {
+  return roundPercent(value, bounds, lowerIsBetter);
 };

@@ -5,7 +5,8 @@ import {
   clearComparisonSlot,
   filterHomepageEntries,
   formatMetricValue,
-  getSummaryMetricMaximums,
+  getMetricBarWidth,
+  getSummaryMetricBounds,
   getVisibleSubclassOptions,
   sortHomepageEntries,
 } from "@/features/homepage/model/homepage.model";
@@ -81,15 +82,47 @@ describe("homepage helpers", () => {
   });
 
   it("builds comparison rows with lower-is-better speed logic", () => {
-    const maximums = getSummaryMetricMaximums(homepageWeapons);
-    const rows = buildComparisonRows(homepageWeapons[0], homepageWeapons[1], maximums);
+    const metricBounds = getSummaryMetricBounds(homepageWeapons);
+    const rows = buildComparisonRows(
+      homepageWeapons[0],
+      homepageWeapons[1],
+      metricBounds,
+    );
     const speedRow = rows.find((row) => row.key === "avgSpeed");
     const rangeRow = rows.find((row) => row.key === "avgRange");
 
     expect(speedRow?.leftState).toBe("loser");
     expect(speedRow?.rightState).toBe("winner");
+    expect(speedRow?.leftPercent).toBeLessThan(speedRow?.rightPercent ?? 0);
     expect(rangeRow?.leftState).toBe("winner");
     expect(rangeRow?.rightState).toBe("loser");
+  });
+
+  it("fills speed bars more when the weapon is faster", () => {
+    const metricBounds = getSummaryMetricBounds(homepageWeapons);
+    const greatswordSpeedWidth = getMetricBarWidth(
+      homepageWeapons[0].summary.avgSpeed,
+      "avgSpeed",
+      metricBounds,
+    );
+    const maceSpeedWidth = getMetricBarWidth(
+      homepageWeapons[2].summary.avgSpeed,
+      "avgSpeed",
+      metricBounds,
+    );
+    const greatswordDamageWidth = getMetricBarWidth(
+      homepageWeapons[0].summary.avgHeavyDamage,
+      "avgHeavyDamage",
+      metricBounds,
+    );
+    const maceDamageWidth = getMetricBarWidth(
+      homepageWeapons[2].summary.avgHeavyDamage,
+      "avgHeavyDamage",
+      metricBounds,
+    );
+
+    expect(maceSpeedWidth).toBeGreaterThan(greatswordSpeedWidth);
+    expect(greatswordDamageWidth).toBeGreaterThan(maceDamageWidth);
   });
 
   it("keeps class fixtures aligned with the homepage hierarchy", () => {
