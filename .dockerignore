@@ -2,7 +2,11 @@
 .github
 .next
 .DS_Store
+.superpowers
 node_modules
 npm-debug.log
+coverage
 e2e/result
 playwright-report
+test-results
+*.tsbuildinfo

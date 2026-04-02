@@ -89,16 +89,5 @@ jobs:
             cd '${DEPLOY_PATH}'
             docker compose down --remove-orphans || true
             docker rm -f chivalry2 || true
-            docker compose up -d --build --remove-orphans
-            for attempt in \$(seq 1 30); do
-              status=\$(docker inspect --format '{{if .State.Health}}{{.State.Health.Status}}{{else}}none{{end}}' chivalry2 2>/dev/null || true)
-              if [ \"\$status\" = healthy ]; then
-                curl -fsS http://127.0.0.1:3000 >/dev/null
-                exit 0
-              fi
-              sleep 2
-            done
-            docker compose ps
-            docker logs chivalry2
-            exit 1
+            docker compose up -d --build --remove-orphans --wait
           "
