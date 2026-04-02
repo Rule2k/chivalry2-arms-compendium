@@ -13,6 +13,5 @@ ENV NODE_ENV=production
 COPY --from=builder /app/package.json /app/package-lock.json ./
 RUN npm ci --omit=dev
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
 EXPOSE 3000
 CMD ["npm", "start", "--", "--hostname", "0.0.0.0", "--port", "3000"]
