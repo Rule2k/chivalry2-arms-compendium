@@ -43,9 +43,6 @@ jobs:
       - name: Run Unit Tests
         run: npm run test:unit
 
-      - name: Build Production App
-        run: npm run build
-
       - name: Configure SSH
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
