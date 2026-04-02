@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chivalry 2 Arms Compendium</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Cormorant+SC:wght@600;700&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #f4f0e8; --royal-cream: #faf6ee; --royal-blue: #1a3a6a;
+    --royal-blue-light: #2a5a8a; --gold: #c4a020; --gold-bright: #d4b430;
+    --crimson: #8a1a2a; --lion-brown: #5a3a1a;
+    --border-gold: #b89040; --ink: #1a1410;
+    --color-cut: #8a1a2a; --color-chop: #1a3a6a; --color-blunt: #5a3a1a;
+    --win-green: #2a6a3a; --lose-red: #8a2a2a;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Alegreya', Georgia, serif; background: var(--ivory); color: var(--ink);
+    min-height: 100vh;
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  /* --- DECREE PAGE (scroll) --- */
+  .decree-page {
+    max-width: 1180px; margin: 0 auto; padding: 0 40px 56px; position: relative;
+    background: var(--royal-cream);
+    box-shadow: 8px 8px 0 var(--border-gold), 12px 12px 0 rgba(184,144,64,0.3),
+      inset 0 0 80px rgba(196,160,32,0.08), 0 0 40px rgba(26,20,16,0.1);
+    border-left: 3px solid var(--border-gold);
+    border-right: 3px solid var(--border-gold);
+    min-height: 100vh;
+  }
+  .decree-page::before {
+    content: ''; position: absolute; left: 6px; right: 6px; top: 6px; bottom: 6px;
+    border: 1px solid var(--gold); pointer-events: none; z-index: 1;
+  }
+  .decree-page::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ctext x='30' y='35' text-anchor='middle' font-size='18' fill='%23b89040' opacity='0.03'%3E%E2%9A%9C%3C/text%3E%3C/svg%3E");
+  }
+
+  .content { position: relative; z-index: 2; padding-top: 8px; }
+
+  /* --- HEADER --- */
+  header { text-align: center; padding: 24px 0 28px; border-bottom: 3px double var(--border-gold); margin-bottom: 24px; }
+  .decree-banner {
+    display: inline-block; background: var(--royal-blue); color: var(--gold-bright);
+    font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 11px;
+    letter-spacing: 5px; padding: 5px 28px; text-transform: uppercase; margin-top: 14px;
+  }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 2.6rem;
+    color: var(--royal-blue); letter-spacing: 4px; margin: 8px 0 6px;
+  }
+  header h1 .title-game {
+    display: block; font-family: 'Cormorant SC', serif; font-size: 0.55em;
+    letter-spacing: 8px; color: var(--gold); margin-bottom: 4px; font-weight: 600;
+  }
+  .ornamental-rule {
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    color: var(--gold); font-size: 14px; margin: 8px 0;
+  }
+  .ornamental-rule::before, .ornamental-rule::after {
+    content: ''; width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+  }
+  header p {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem;
+    color: var(--royal-blue-light); margin-top: 4px;
+  }
+
+  /* =============================================
+     COMPARISON ZONE
+     ============================================= */
+  .comparison-zone {
+    border: 4px double var(--gold); padding: 24px 20px; margin-bottom: 24px;
+    background: linear-gradient(135deg, rgba(196,160,32,0.03), rgba(26,58,106,0.02));
+    position: relative;
+  }
+  .comparison-zone::before {
+    content: ''; position: absolute; inset: 4px; border: 1px solid rgba(184,144,64,0.3);
+    pointer-events: none;
+  }
+
+  /* --- DUEL PANELS (top row) --- */
+  .duel-panels {
+    display: flex; align-items: stretch; gap: 0; margin-bottom: 24px;
+  }
+
+  .duel-panel {
+    flex: 1; padding: 20px 18px; text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 150px; position: relative;
+    transition: all 0.3s ease;
+  }
+  .duel-panel.left-panel { border-right: none; }
+  .duel-panel.right-panel { border-left: none; }
+  .duel-panel.empty { color: var(--royal-blue-light); font-style: italic; }
+
+  .duel-panel .panel-placeholder {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
+    color: var(--royal-blue-light); opacity: 0.6; font-style: italic;
+  }
+  .duel-panel .panel-placeholder-icon {
+    font-size: 2.4rem; color: var(--gold); opacity: 0.3; margin-bottom: 8px; display: block;
+  }
+
+  .panel-side-label {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 0.7rem;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--gold); opacity: 0.7;
+    margin-bottom: 8px;
+  }
+
+  .panel-weapon-name {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.6rem;
+    color: var(--royal-blue); letter-spacing: 1px; margin-bottom: 8px; line-height: 1.2;
+  }
+
+  .panel-dmg-badge {
+    display: inline-block; padding: 3px 12px; font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #fff; border-radius: 1px; margin-bottom: 8px;
+  }
+  .panel-dmg-badge.Cut { background: var(--color-cut); }
+  .panel-dmg-badge.Chop { background: var(--color-chop); }
+  .panel-dmg-badge.Blunt { background: var(--color-blunt); }
+
+  .panel-meta {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem;
+    color: #7a6a5a; line-height: 1.5;
+  }
+  .panel-meta span { display: block; }
+  .panel-meta .meta-label {
+    font-style: normal; font-weight: 600; color: var(--royal-blue-light);
+    font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;
+  }
+
+  .panel-clear-btn {
+    margin-top: 10px; padding: 3px 14px; border: 1px solid var(--border-gold);
+    background: transparent; font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 0.75rem; color: var(--crimson); cursor: pointer; letter-spacing: 1px;
+    text-transform: uppercase; transition: all 0.2s;
+  }
+  .panel-clear-btn:hover {
+    background: var(--crimson); color: #fff; border-color: var(--crimson);
+  }
+
+  /* --- VS SHIELD --- */
+  .vs-shield {
+    flex: 0 0 70px; display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 3;
+  }
+  .vs-badge {
+    width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; background: var(--royal-blue); border: 3px solid var(--gold);
+    box-shadow: 0 4px 16px rgba(26,58,106,0.3), 0 0 0 6px rgba(196,160,32,0.15);
+    font-family: 'Cormorant SC', serif; font-weight: 700; font-size: 1.3rem;
+    color: var(--gold-bright); letter-spacing: 2px;
+  }
+
+  /* --- MIRRORED STAT BARS --- */
+  .mirrored-stats { padding: 0 10px; }
+  .mirrored-stats-title {
+    text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 0.8rem; color: var(--royal-blue-light); letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .mirrored-stats-title::before, .mirrored-stats-title::after {
+    content: ''; width: 40px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+  }
+
+  .mirrored-row { display: flex; align-items: center; gap: 0; margin-bottom: 10px; }
+  .mirrored-row:last-child { margin-bottom: 0; }
+
+  .mirror-bar-left-wrap { flex: 1; display: flex; justify-content: flex-end; padding-right: 8px; }
+  .mirror-bar-right-wrap { flex: 1; display: flex; justify-content: flex-start; padding-left: 8px; }
+
+  .mirror-bar-track {
+    width: 100%; height: 10px; background: var(--ivory);
+    border: 1px solid rgba(184,144,64,0.3); border-radius: 1px;
+    overflow: hidden; position: relative;
+  }
+  .mirror-bar-track.left-track { direction: rtl; }
+
+  .mirror-bar-fill {
+    height: 100%; border-radius: 1px;
+    transition: width 0.6s ease, background 0.4s ease;
+    background: var(--royal-blue);
+  }
+  .mirror-bar-fill.winner { background: var(--gold); }
+  .mirror-bar-fill.loser { background: var(--royal-blue); }
+
+  .mirror-val-left {
+    flex: 0 0 36px; text-align: right; padding-right: 6px;
+    font-family: 'Alegreya', serif; font-size: 0.78rem; color: #8a7a6a;
+  }
+  .mirror-val-right {
+    flex: 0 0 36px; text-align: left; padding-left: 6px;
+    font-family: 'Alegreya', serif; font-size: 0.78rem; color: #8a7a6a;
+  }
+  .mirror-val-left.winner, .mirror-val-right.winner { color: var(--win-green); font-weight: 700; }
+  .mirror-val-left.loser, .mirror-val-right.loser { color: var(--lose-red); }
+
+  .mirror-stat-label {
+    flex: 0 0 90px; text-align: center;
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 1.5px; color: var(--royal-blue);
+  }
+
+  .mirrored-empty {
+    text-align: center; padding: 20px; font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 0.95rem; color: var(--royal-blue-light); opacity: 0.5;
+  }
+
+  /* --- ORNAMENTAL DIVIDER --- */
+  .section-divider {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    padding: 4px 0; color: var(--gold); font-size: 13px;
+  }
+  .section-divider::before, .section-divider::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+  }
+  .section-divider.major { padding: 16px 0; font-size: 16px; }
+
+  /* --- CONTROLS --- */
+  .controls {
+    display: flex; flex-direction: column; gap: 0;
+    padding: 0; margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(196,160,32,0.06), rgba(26,58,106,0.04));
+    border: 1px solid var(--border-gold); border-radius: 2px;
+    overflow: hidden;
+  }
+  .controls-row {
+    display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+    padding: 16px 20px;
+  }
+  .search-input {
+    flex: 1; min-width: 180px; padding: 8px 14px; border: 1px solid var(--border-gold);
+    background: var(--royal-cream); font-family: 'Alegreya', serif; font-size: 0.95rem;
+    color: var(--ink); outline: none; border-radius: 1px;
+  }
+  .search-input:focus { border-color: var(--gold-bright); box-shadow: 0 0 0 2px rgba(196,160,32,0.2); }
+  .search-input::placeholder { color: #a09080; }
+  .filter-btn, .sort-select {
+    padding: 7px 16px; border: 2px solid var(--border-gold); background: var(--royal-cream);
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.9rem;
+    color: var(--royal-blue); cursor: pointer; transition: all 0.2s; letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .filter-btn:hover, .filter-btn.active { background: var(--royal-blue); color: var(--gold-bright); border-color: var(--gold); }
+  .sort-select {
+    appearance: none; padding-right: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%231a3a6a'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 10px center;
+  }
+
+  /* Filter rows */
+  .filter-row {
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(184,144,64,0.25);
+  }
+  .filter-row-label {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.72rem;
+    color: var(--royal-blue-light); letter-spacing: 2px; text-transform: uppercase;
+    margin-right: 6px; flex: 0 0 auto;
+  }
+  .filter-btn.sm {
+    padding: 5px 12px; font-size: 0.8rem; letter-spacing: 0.5px;
+  }
+  .filter-subclasses {
+    display: none;
+    background: rgba(26,58,106,0.02);
+  }
+  .filter-subclasses.visible { display: flex; }
+
+  /* --- COUNT BAR --- */
+  .count-bar {
+    text-align: center; padding: 10px; font-family: 'Cormorant Garamond', serif;
+    font-weight: 600; font-size: 1rem; color: var(--royal-blue); letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+
+  /* --- WEAPON SECTIONS (two-column grid) --- */
+  .weapon-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* --- WEAPON CARD (codex page entry) --- */
+  .weapon-section {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 22px; position: relative;
+    transition: all 0.3s ease; overflow: hidden;
+    background: #fdfaf3;
+    border: 1px solid rgba(196,160,32,0.3);
+  }
+  .weapon-section:hover {
+    background: #fdf8eb;
+    border-color: var(--gold-bright);
+    box-shadow: 0 2px 12px rgba(196,160,32,0.12);
+  }
+
+  /* Selection states — neutral gold/blue, no green/red */
+  .weapon-section.selected-left {
+    border-color: var(--gold-bright);
+    background: rgba(196,160,32,0.06);
+    box-shadow: 0 0 0 2px rgba(196,160,32,0.15);
+  }
+  .weapon-section.selected-right {
+    border-color: var(--royal-blue);
+    background: rgba(26,58,106,0.04);
+    box-shadow: 0 0 0 2px rgba(26,58,106,0.12);
+  }
+  .weapon-section.selected-left.selected-right {
+    border-color: var(--gold-bright);
+    background: rgba(196,160,32,0.08);
+    box-shadow: 0 0 0 2px rgba(196,160,32,0.2);
+  }
+
+  /* Card weapon name (centered top) */
+  .section-weapon-name {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.5rem;
+    color: var(--royal-blue); letter-spacing: 1px; margin-bottom: 8px; line-height: 1.2;
+    text-align: center;
+  }
+
+  /* Damage badge (centered below name) */
+  .section-dmg-badge {
+    display: inline-block; padding: 3px 12px; font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #fff; border-radius: 1px; margin-bottom: 12px;
+  }
+  .section-dmg-badge.Cut { background: var(--color-cut); }
+  .section-dmg-badge.Chop { background: var(--color-chop); }
+  .section-dmg-badge.Blunt { background: var(--color-blunt); }
+
+  /* Gold rule separator inside card */
+  .card-rule {
+    width: 60%; height: 1px; margin: 0 auto 14px;
+    background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+  }
+
+  /* Stats bars (full width) */
+  .section-stats {
+    display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; width: 100%;
+  }
+  .section-stat-row { display: flex; align-items: center; gap: 8px; }
+  .section-stat-label {
+    flex: 0 0 72px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--royal-blue); font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    text-align: right;
+  }
+  .section-stat-track {
+    flex: 1; height: 8px; background: var(--ivory);
+    border: 1px solid rgba(184,144,64,0.3); border-radius: 1px; overflow: hidden;
+  }
+  .section-stat-fill {
+    height: 100%; background: var(--royal-blue); border-radius: 1px;
+    transition: width 0.5s ease, background 0.3s;
+  }
+  .weapon-section:hover .section-stat-fill { background: var(--gold); }
+  .section-stat-val {
+    flex: 0 0 32px; font-size: 0.72rem; color: #8a7a6a;
+    font-family: 'Alegreya', serif; text-align: right;
+  }
+
+  /* Meta info (type/class) below stats */
+  .section-meta {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem;
+    color: #7a6a5a; line-height: 1.5; text-align: center; margin-bottom: 14px;
+  }
+  .section-meta span { display: block; }
+  .section-meta .meta-label {
+    font-style: normal; font-weight: 600; color: var(--royal-blue-light);
+    font-size: 0.7rem; letter-spacing: 1.2px; text-transform: uppercase;
+  }
+
+  /* Duel buttons — neutral gold/blue, no green/red */
+  .duel-buttons { display: flex; gap: 10px; width: 100%; }
+  .duel-btn {
+    flex: 1; padding: 7px 12px; border: 2px solid var(--border-gold); background: var(--royal-cream);
+    font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 0.8rem;
+    color: var(--royal-blue); cursor: pointer; transition: all 0.2s; letter-spacing: 1px;
+    text-transform: uppercase; text-align: center;
+  }
+  .duel-btn:hover {
+    background: var(--royal-blue); color: var(--gold-bright); border-color: var(--gold);
+  }
+  .duel-btn.active-left {
+    background: var(--gold); color: var(--ink); border-color: var(--gold-bright);
+  }
+  .duel-btn.active-right {
+    background: var(--royal-blue); color: var(--gold-bright); border-color: var(--royal-blue-light);
+  }
+
+  /* --- FOOTER --- */
+  footer {
+    text-align: center; margin-top: 40px; padding: 0;
+  }
+  .footer-rule {
+    display: flex; align-items: center; justify-content: center; gap: 18px;
+    margin-bottom: 16px;
+  }
+  .footer-rule::before, .footer-rule::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+  }
+  .footer-rule span {
+    color: var(--gold); font-size: 12px; letter-spacing: 6px;
+  }
+  footer p {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.88rem;
+    color: var(--royal-blue-light); opacity: 0.6; letter-spacing: 1px;
+  }
+
+  /* --- RESPONSIVE --- */
+  @media (max-width: 900px) {
+    .weapon-sections { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 700px) {
+    .decree-page { padding: 0 14px 32px; }
+    header h1 { font-size: 1.8rem; letter-spacing: 2px; }
+    .controls-row { flex-direction: column; }
+    .search-input { min-width: 100%; }
+    .filter-row { flex-wrap: wrap; }
+
+    .duel-panels { flex-direction: column; align-items: center; gap: 0; }
+    .duel-panel { min-height: 100px; padding: 14px; }
+    .duel-panel.left-panel { border-right: none; border-bottom: none; }
+    .duel-panel.right-panel { border-left: none; border-top: none; }
+    .vs-shield { flex: 0 0 50px; }
+    .vs-badge { width: 48px; height: 48px; font-size: 1rem; }
+    .panel-weapon-name { font-size: 1.3rem; }
+
+    .mirrored-row { flex-wrap: wrap; gap: 4px; }
+    .mirror-stat-label { flex: 0 0 100%; text-align: center; margin-bottom: 4px; }
+    .mirror-val-left, .mirror-val-right { flex: 0 0 28px; font-size: 0.72rem; }
+
+    .weapon-section { padding: 18px 14px; }
+    .section-stat-label { flex: 0 0 65px; font-size: 0.66rem; }
+    .section-stat-val { flex: 0 0 28px; font-size: 0.68rem; }
+    .duel-buttons { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="decree-page">
+  <div class="content">
+    <header>
+      <h1><span class="title-game">Chivalry 2</span>ARMS COMPENDIUM</h1>
+      <div class="ornamental-rule">&#9884;</div>
+      <p>A scholarly record of every blade, axe, and bludgeon in the realm</p>
+      <div class="decree-banner">Compiled by the Royal Scribe</div>
+    </header>
+
+    <!-- COMPARISON ZONE -->
+    <div class="comparison-zone" id="comparisonZone">
+      <div class="duel-panels" id="duelPanels">
+        <!-- Left panel -->
+        <div class="duel-panel left-panel" id="leftPanel">
+          <div class="panel-side-label">Left Weapon</div>
+          <span class="panel-placeholder-icon">&#9876;</span>
+          <span class="panel-placeholder">Select a weapon below</span>
+        </div>
+
+        <!-- VS shield -->
+        <div class="vs-shield">
+          <div class="vs-badge">VS</div>
+        </div>
+
+        <!-- Right panel -->
+        <div class="duel-panel right-panel" id="rightPanel">
+          <div class="panel-side-label">Right Weapon</div>
+          <span class="panel-placeholder-icon">&#9876;</span>
+          <span class="panel-placeholder">Select a weapon below</span>
+        </div>
+      </div>
+
+      <!-- Mirrored stat bars -->
+      <div class="mirrored-stats" id="mirroredStats">
+        <div class="mirrored-empty">Select two weapons to compare their stats</div>
+      </div>
+    </div>
+
+    <!-- ORNAMENTAL DIVIDER -->
+    <div class="section-divider major">&#9884;</div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <div class="controls-row">
+        <input type="text" class="search-input" id="search" placeholder="Search the compendium...">
+        <select class="sort-select" id="sort">
+          <option value="name">Sort by Name</option>
+          <option value="avgLightDmg">Light Damage</option>
+          <option value="avgHeavyDmg">Heavy Damage</option>
+          <option value="avgRange">Range</option>
+          <option value="avgSpeed">Speed</option>
+        </select>
+      </div>
+      <div class="filter-row" id="classFilters">
+        <span class="filter-row-label">Class</span>
+        <button class="filter-btn sm active" data-class="All">All</button>
+        <button class="filter-btn sm" data-class="Knight">Knight</button>
+        <button class="filter-btn sm" data-class="Vanguard">Vanguard</button>
+        <button class="filter-btn sm" data-class="Footman">Footman</button>
+        <button class="filter-btn sm" data-class="Archer">Archer</button>
+      </div>
+      <div class="filter-row filter-subclasses" id="subclassFilters"></div>
+    </div>
+
+    <div class="count-bar" id="countBar">&#9884; 8 Entries Catalogued &#9884;</div>
+
+    <!-- WEAPON LIST -->
+    <div class="weapon-sections" id="sections"></div>
+
+    <footer>
+      <div class="footer-rule"><span>&#9884; &#9884; &#9884;</span></div>
+      <p>Anno Domini MMXXIV &mdash; The Royal Archives</p>
+    </footer>
+  </div>
+</div>
+
+<script>
+const weapons = [
+  {name:"Greatsword",damageType:"Cut",types:"Sword, Two Handed",subclassAccess:["Devastator","Officer"],avgLightDmg:60,avgHeavyDmg:80,avgRange:200,avgSpeed:475},
+  {name:"Battle Axe",damageType:"Chop",types:"Axe, Two Handed",subclassAccess:["Crusader","Devastator"],avgLightDmg:53,avgHeavyDmg:73,avgRange:177,avgSpeed:467},
+  {name:"Maul",damageType:"Blunt",types:"Hammer, Two Handed",subclassAccess:["Devastator"],avgLightDmg:63,avgHeavyDmg:90,avgRange:173,avgSpeed:550},
+  {name:"Rapier",damageType:"Cut",types:"One Handed, Sword",subclassAccess:["Man at Arms"],avgLightDmg:28,avgHeavyDmg:40,avgRange:155,avgSpeed:258},
+  {name:"Halberd",damageType:"Chop",types:"Axe, Polearm, Two Handed",subclassAccess:["Poleman"],avgLightDmg:55,avgHeavyDmg:78,avgRange:210,avgSpeed:508},
+  {name:"Dagger",damageType:"Cut",types:"Dagger, One Handed",subclassAccess:["Ambusher"],avgLightDmg:27,avgHeavyDmg:38,avgRange:118,avgSpeed:200},
+  {name:"Morning Star",damageType:"Blunt",types:"Club, One Handed",subclassAccess:["Crusader","Man at Arms"],avgLightDmg:43,avgHeavyDmg:57,avgRange:145,avgSpeed:325},
+  {name:"Glaive",damageType:"Chop",types:"Axe, Polearm, Two Handed",subclassAccess:["Poleman","Raider"],avgLightDmg:55,avgHeavyDmg:73,avgRange:212,avgSpeed:500}
+];
+
+const classHierarchy = {
+  Knight: ['Officer', 'Guardian', 'Crusader'],
+  Vanguard: ['Devastator', 'Raider', 'Ambusher'],
+  Footman: ['Poleman', 'Man at Arms', 'Engineer'],
+  Archer: ['Longbowman', 'Crossbowman', 'Skirmisher']
+};
+
+const maxStats = {
+  avgLightDmg: Math.max(...weapons.map(w => w.avgLightDmg)),
+  avgHeavyDmg: Math.max(...weapons.map(w => w.avgHeavyDmg)),
+  avgRange: Math.max(...weapons.map(w => w.avgRange)),
+  avgSpeed: Math.max(...weapons.map(w => w.avgSpeed))
+};
+
+let activeClass = 'All';
+let activeSubclass = 'All';
+let sortKey = 'name';
+let searchTerm = '';
+let leftWeapon = null;
+let rightWeapon = null;
+
+const sections = document.getElementById('sections');
+const countBar = document.getElementById('countBar');
+const leftPanel = document.getElementById('leftPanel');
+const rightPanel = document.getElementById('rightPanel');
+const mirroredStats = document.getElementById('mirroredStats');
+
+// --- PANEL RENDERING ---
+const renderPanel = (panel, weaponIdx, side) => {
+  if (weaponIdx === null) {
+    panel.innerHTML = `
+      <div class="panel-side-label">${side === 'left' ? 'Left Weapon' : 'Right Weapon'}</div>
+      <span class="panel-placeholder-icon">&#9876;</span>
+      <span class="panel-placeholder">Select a weapon below</span>
+    `;
+    panel.classList.add('empty');
+    return;
+  }
+  panel.classList.remove('empty');
+  const w = weapons[weaponIdx];
+  panel.innerHTML = `
+    <div class="panel-side-label">${side === 'left' ? 'Left Weapon' : 'Right Weapon'}</div>
+    <div class="panel-weapon-name">${w.name}</div>
+    <div class="panel-dmg-badge ${w.damageType}">${w.damageType}</div>
+    <div class="panel-meta">
+      <span><span class="meta-label">Type</span> ${w.types}</span>
+      <span><span class="meta-label">Class</span> ${w.subclassAccess.join(', ')}</span>
+    </div>
+    <button class="panel-clear-btn" onclick="clearSlot('${side}')">&times; Clear</button>
+  `;
+};
+
+// --- MIRRORED STATS RENDERING ---
+const renderMirroredStats = () => {
+  if (leftWeapon === null && rightWeapon === null) {
+    mirroredStats.innerHTML = '<div class="mirrored-empty">Select two weapons to compare their stats</div>';
+    return;
+  }
+  if (leftWeapon === null || rightWeapon === null) {
+    mirroredStats.innerHTML = '<div class="mirrored-empty">Select a second weapon to see the comparison</div>';
+    return;
+  }
+
+  const wL = weapons[leftWeapon];
+  const wR = weapons[rightWeapon];
+
+  const stats = [
+    { key: 'avgLightDmg', label: 'Light Dmg', lowerIsBetter: false },
+    { key: 'avgHeavyDmg', label: 'Heavy Dmg', lowerIsBetter: false },
+    { key: 'avgRange', label: 'Range', lowerIsBetter: false },
+    { key: 'avgSpeed', label: 'Speed', lowerIsBetter: true }
+  ];
+
+  const rows = stats.map(stat => {
+    const valL = wL[stat.key];
+    const valR = wR[stat.key];
+    const max = maxStats[stat.key];
+    const pctL = Math.round((valL / max) * 100);
+    const pctR = Math.round((valR / max) * 100);
+
+    let leftWins, rightWins;
+    if (stat.lowerIsBetter) {
+      leftWins = valL < valR;
+      rightWins = valR < valL;
+    } else {
+      leftWins = valL > valR;
+      rightWins = valR > valL;
+    }
+    const tied = valL === valR;
+
+    const leftFillClass = tied ? '' : (leftWins ? 'winner' : 'loser');
+    const rightFillClass = tied ? '' : (rightWins ? 'winner' : 'loser');
+    const leftValClass = tied ? '' : (leftWins ? 'winner' : 'loser');
+    const rightValClass = tied ? '' : (rightWins ? 'winner' : 'loser');
+
+    return `<div class="mirrored-row">
+      <span class="mirror-val-left ${leftValClass}">${valL}</span>
+      <div class="mirror-bar-left-wrap">
+        <div class="mirror-bar-track left-track">
+          <div class="mirror-bar-fill ${leftFillClass}" style="width:${pctL}%"></div>
+        </div>
+      </div>
+      <span class="mirror-stat-label">${stat.label}</span>
+      <div class="mirror-bar-right-wrap">
+        <div class="mirror-bar-track">
+          <div class="mirror-bar-fill ${rightFillClass}" style="width:${pctR}%"></div>
+        </div>
+      </div>
+      <span class="mirror-val-right ${rightValClass}">${valR}</span>
+    </div>`;
+  });
+
+  mirroredStats.innerHTML = `
+    <div class="mirrored-stats-title">Comparative Analysis</div>
+    ${rows.join('')}
+  `;
+};
+
+// --- CLEAR SLOT ---
+const clearSlot = (side) => {
+  if (side === 'left') leftWeapon = null;
+  else rightWeapon = null;
+  renderComparison();
+  renderSections();
+};
+
+// --- SET SLOT ---
+const setSlot = (side, weaponIdx) => {
+  if (side === 'left') {
+    if (rightWeapon === weaponIdx) rightWeapon = leftWeapon;
+    leftWeapon = weaponIdx;
+  } else {
+    if (leftWeapon === weaponIdx) leftWeapon = rightWeapon;
+    rightWeapon = weaponIdx;
+  }
+  renderComparison();
+  renderSections();
+};
+
+// --- RENDER COMPARISON ZONE ---
+const renderComparison = () => {
+  renderPanel(leftPanel, leftWeapon, 'left');
+  renderPanel(rightPanel, rightWeapon, 'right');
+  renderMirroredStats();
+};
+
+// --- STAT ROW FOR WEAPON LIST ---
+const statRow = (label, val, max) => {
+  const pct = Math.round((val / max) * 100);
+  return `<div class="section-stat-row">
+    <span class="section-stat-label">${label}</span>
+    <div class="section-stat-track"><div class="section-stat-fill" style="width:${pct}%"></div></div>
+    <span class="section-stat-val">${val}</span>
+  </div>`;
+};
+
+// --- RENDER WEAPON LIST ---
+const renderSections = () => {
+  let filtered = weapons.map((w, origIdx) => ({ ...w, origIdx })).filter(w => {
+    let matchFilter = true;
+    if (activeSubclass !== 'All') {
+      matchFilter = w.subclassAccess.includes(activeSubclass);
+    } else if (activeClass !== 'All') {
+      const subs = classHierarchy[activeClass];
+      matchFilter = w.subclassAccess.some(s => subs.includes(s));
+    }
+    const classStr = w.subclassAccess.join(', ').toLowerCase();
+    const matchSearch = w.name.toLowerCase().includes(searchTerm) ||
+      w.types.toLowerCase().includes(searchTerm) || classStr.includes(searchTerm);
+    return matchFilter && matchSearch;
+  });
+
+  if (sortKey === 'name') {
+    filtered.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
+    filtered.sort((a, b) => b[sortKey] - a[sortKey]);
+  }
+
+  countBar.textContent = `\u269C ${filtered.length} Entr${filtered.length !== 1 ? 'ies' : 'y'} Catalogued \u269C`;
+
+  sections.innerHTML = filtered.map((w, i) => {
+    const isLeft = leftWeapon === w.origIdx;
+    const isRight = rightWeapon === w.origIdx;
+    const leftBtnClass = isLeft ? 'duel-btn active-left' : 'duel-btn';
+    const rightBtnClass = isRight ? 'duel-btn active-right' : 'duel-btn';
+
+    let sectionClass = 'weapon-section';
+    if (isLeft) sectionClass += ' selected-left';
+    if (isRight) sectionClass += ' selected-right';
+
+    return `
+      <div class="${sectionClass}">
+        <div class="section-weapon-name">${w.name}</div>
+        <div class="section-dmg-badge ${w.damageType}">${w.damageType}</div>
+        <div class="card-rule"></div>
+        <div class="section-stats">
+          ${statRow('Light Dmg', w.avgLightDmg, maxStats.avgLightDmg)}
+          ${statRow('Heavy Dmg', w.avgHeavyDmg, maxStats.avgHeavyDmg)}
+          ${statRow('Range', w.avgRange, maxStats.avgRange)}
+          ${statRow('Speed', w.avgSpeed, maxStats.avgSpeed)}
+        </div>
+        <div class="section-meta">
+          <span><span class="meta-label">Type</span> ${w.types}</span>
+          <span><span class="meta-label">Class</span> ${w.subclassAccess.join(', ')}</span>
+        </div>
+        <div class="duel-buttons">
+          <button class="${leftBtnClass}" onclick="setSlot('left', ${w.origIdx})">${isLeft ? '\u2714 Left' : 'Set Left'}</button>
+          <button class="${rightBtnClass}" onclick="setSlot('right', ${w.origIdx})">${isRight ? '\u2714 Right' : 'Set Right'}</button>
+        </div>
+      </div>`;
+  }).join('');
+};
+
+// --- SUBCLASS ROW RENDERING ---
+const subclassFilters = document.getElementById('subclassFilters');
+
+const renderSubclassRow = () => {
+  if (activeClass === 'All') {
+    subclassFilters.classList.remove('visible');
+    subclassFilters.innerHTML = '';
+    return;
+  }
+  const subs = classHierarchy[activeClass];
+  subclassFilters.classList.add('visible');
+  subclassFilters.innerHTML = `
+    <span class="filter-row-label">Subclass</span>
+    <button class="filter-btn sm ${activeSubclass === 'All' ? 'active' : ''}" data-subclass="All">All ${activeClass}</button>
+    ${subs.map(s => `<button class="filter-btn sm ${activeSubclass === s ? 'active' : ''}" data-subclass="${s}">${s}</button>`).join('')}
+  `;
+  subclassFilters.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeSubclass = btn.dataset.subclass;
+      renderSubclassRow();
+      renderSections();
+    });
+  });
+};
+
+// --- EVENT LISTENERS ---
+document.getElementById('search').addEventListener('input', e => {
+  searchTerm = e.target.value.toLowerCase().trim();
+  renderSections();
+});
+
+document.querySelectorAll('#classFilters .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#classFilters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeClass = btn.dataset.class;
+    activeSubclass = 'All';
+    renderSubclassRow();
+    renderSections();
+  });
+});
+
+document.getElementById('sort').addEventListener('change', e => {
+  sortKey = e.target.value;
+  renderSections();
+});
+
+// --- INITIAL RENDER ---
+renderComparison();
+renderSections();
+</script>
+</body>
+</html>

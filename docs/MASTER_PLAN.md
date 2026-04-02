@@ -438,42 +438,55 @@ Validated decisions:
 - the normalized weapon contract acts as the source of truth for product-facing weapon data, and TypeScript types should be derived from that contract rather than duplicated by hand;
 - generated normalized datasets are useful development and validation artifacts now, and may later serve as snapshots, fixtures, regression references, or export projections even after the project adopts a database;
 - the current catalog build script is the first form of the ingestion pipeline and may later evolve into a database import, sync, or validation script rather than being discarded;
-- homepage summary metrics stay simplified and are derived from core attack data.
+- homepage summary metrics stay simplified and are derived from core attack data;
+- homepage design direction is validated: `prototypes/homepage-designs-v2/71-arms-compendium-codex.html` is the chosen reference prototype.
+
+### Homepage Design Direction
+
+The chosen design emerged from 7 waves of iterative prototyping (71 designs total). The final prototype combines:
+
+- **Identity**: "Chivalry 2 Arms Compendium" — positions the site as a scholarly weapon reference, not a comparison tool.
+- **Aesthetic**: Royal Decree / medieval parchment style — ivory/cream background, royal blue + gold palette, Cormorant Garamond + Alegreya fonts, gold double borders, fleur-de-lis motifs, linen noise texture.
+- **Weapon cards**: Codex-page entries in a 2-column grid — centered weapon name, damage type badge, gold rule separator, full-width stat bars, meta info (type/class), and Set Left / Set Right comparison buttons.
+- **Comparison mode**: Mirrored stat bars (left grows right-to-left, right grows left-to-right), VS shield badge, winner gets gold bar + green value, Speed stat uses lower-is-better logic.
+- **Selection states**: Neutral gold (left) and royal blue (right) — no green/red highlighting on weapon cards or buttons.
+- **Controls**: Search, damage type filter (All/Cut/Chop/Blunt), sort by stat.
+- **Footer**: Minimal ornamental rule with subtle text.
 
 ## 12. Progress and Next Planning Candidates
 
 ### Stage Progress
 
-- Stage 1. Strategic framing: complete enough to proceed
-- Stage 2. Source normalization and product contract: complete enough to proceed
-- Stage 3. V1 reference experience: next
+- Stage 1. Strategic framing: complete
+- Stage 2. Source normalization and product contract: complete
+- Stage 3. V1 reference experience: in progress — homepage design validated, implementation next
 - Stage 4. Public deployment and validation: pending
 - Stage 5. Data management evolution: pending
 - Stage 6. Expansion: pending
 
 ### Next Planning Candidates
 
-- front-end component architecture for simple/detailed/comparison modes.
-- main page information architecture and browsing flow.
+- front-end component architecture translating the validated prototype into real Next.js components.
+- main page implementation on top of the normalized V1 catalog.
 - comparison-mode interaction design on top of the normalized model.
 
 ## 13. Session Reset Summary
 
 ### Current State
 
-The strategic foundation is in place. Stage 2 has produced a stable normalized weapon contract, a curated V1 catalog, and an executable ingestion path that generates product-facing data from the current source library.
+Stages 1 and 2 are complete. The homepage design direction is validated through iterative prototyping — the chosen prototype is `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`. The next step is translating this prototype into the real Next.js front-end.
 
 ### Current Focus
 
-Move into Stage 3 by designing and implementing the first usable front-end reference experience on top of the normalized V1 weapon catalog.
+Implement the V1 front-end reference experience: translate the validated homepage prototype into Next.js components, wire them to the normalized V1 weapon catalog, and deliver a working main page with browsing, filtering, sorting, and in-place comparison.
 
 ### Next High-Level Question
 
-What front-end architecture should power the simple view, detailed view, filtering, sorting, and in-place comparison on top of the normalized catalog?
+What front-end component architecture should translate the validated prototype into real Next.js components on top of the normalized catalog?
 
 ### Last Updated
 
-2026-03-31
+2026-04-01
 
 ## 14. Operating Rules
 
