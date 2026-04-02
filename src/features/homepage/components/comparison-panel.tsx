@@ -22,38 +22,37 @@ export const ComparisonPanel = ({
   return (
     <div
       className={joinClassNames(
-        "panel-shell flex flex-1 flex-col items-center justify-center px-[18px] py-5 text-center",
+        "panel-shell flex h-[140px] flex-1 flex-col items-center justify-center px-[18px] py-3 text-center",
         !weapon && "panel-empty",
       )}
     >
-      <div className="font-ornate mb-2 text-[0.7rem] font-bold uppercase tracking-[0.3em] text-[var(--gold)] opacity-70">
+      <div className="font-ornate mb-1 text-[0.7rem] font-bold uppercase tracking-[0.3em] text-[var(--gold)] opacity-70">
         {panelLabel}
       </div>
       {weapon ? (
         <>
-          <div className="font-ornate mb-2 text-[1.3rem] leading-tight font-bold text-[var(--royal-blue)] md:text-[1.6rem]">
-            {weapon.name}
+          <div className="mb-1 flex items-center justify-center gap-2">
+            <span className="font-ornate text-[1.3rem] leading-tight font-bold text-[var(--royal-blue)] md:text-[1.6rem]">
+              {weapon.name}
+            </span>
+            <DamageBadge
+              className="font-ornate text-[0.7rem] font-bold"
+              damageType={weapon.damageType}
+            />
           </div>
-          <DamageBadge
-            className="font-ornate mb-2 text-[0.75rem] font-bold"
-            damageType={weapon.damageType}
-          />
-          <div className="font-ornate text-[0.85rem] italic leading-6 text-[#7a6a5a]">
-            <span className="block">
-              <span className="mr-1 text-[0.7rem] font-semibold uppercase not-italic tracking-[0.1em] text-[var(--royal-blue-light)]">
-                Type
-              </span>
-              {weapon.weaponTypesLabel}
+          <div className="font-ornate mb-1 text-[0.8rem] italic text-[#7a6a5a]">
+            <span className="mr-1 text-[0.65rem] font-semibold uppercase not-italic tracking-[0.1em] text-[var(--royal-blue-light)]">
+              Type
             </span>
-            <span className="block">
-              <span className="mr-1 text-[0.7rem] font-semibold uppercase not-italic tracking-[0.1em] text-[var(--royal-blue-light)]">
-                Class
-              </span>
-              {weapon.subclassAccessLabel}
+            {weapon.weaponTypesLabel}
+            <span className="mx-1 text-[var(--border-gold)]">·</span>
+            <span className="mr-1 text-[0.65rem] font-semibold uppercase not-italic tracking-[0.1em] text-[var(--royal-blue-light)]">
+              Class
             </span>
+            {weapon.subclassAccessLabel}
           </div>
           <Button
-            className="mt-3"
+            className="mt-1"
             onClick={() => onClear(side)}
             variant="clear"
           >
@@ -62,7 +61,7 @@ export const ComparisonPanel = ({
         </>
       ) : (
         <>
-          <span className="mb-2 block text-[2.4rem] text-[var(--gold)] opacity-30">
+          <span className="mb-1 block text-[2.4rem] text-[var(--gold)] opacity-30">
             &#9876;
           </span>
           <span className="font-ornate text-[1.1rem] italic text-[var(--royal-blue-light)] opacity-60">

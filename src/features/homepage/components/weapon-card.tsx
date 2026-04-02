@@ -38,20 +38,22 @@ export const WeaponCard = ({
   return (
     <article
       className={joinClassNames(
-        "weapon-card flex flex-col items-center p-[22px]",
+        "weapon-card flex flex-col items-center gap-4 p-6",
         isLeftSelected && "weapon-card--selected-left",
         isRightSelected && "weapon-card--selected-right",
       )}
     >
-      <h2 className="font-ornate mb-2 text-center text-[1.5rem] leading-tight font-bold tracking-[0.05em] text-[var(--royal-blue)]">
-        {weapon.name}
-      </h2>
-      <DamageBadge
-        className="font-ornate mb-3 text-[0.75rem] font-bold"
-        damageType={weapon.damageType}
-      />
-      <div className="card-rule mb-4" />
-      <div className="mb-4 flex w-full flex-col gap-2">
+      <div className="flex flex-col items-center gap-2">
+        <h2 className="font-ornate text-center text-[1.5rem] leading-tight font-bold tracking-[0.05em] text-[var(--royal-blue)]">
+          {weapon.name}
+        </h2>
+        <DamageBadge
+          className="font-ornate text-[0.75rem] font-bold"
+          damageType={weapon.damageType}
+        />
+      </div>
+      <div className="card-rule" />
+      <div className="flex w-full flex-col gap-2">
         {WEAPON_CARD_METRICS.map((metric) => {
           const metricValue = weapon.summary[metric.key];
           const width = getMetricBarWidth(metricValue, metric.key, maximums);
@@ -69,7 +71,7 @@ export const WeaponCard = ({
           );
         })}
       </div>
-      <div className="font-ornate mb-4 text-center text-[0.85rem] italic leading-6 text-[#7a6a5a]">
+      <div className="font-ornate text-center text-[0.85rem] italic leading-6 text-[#7a6a5a]">
         <span className="block">
           <span className="mr-1 text-[0.7rem] font-semibold uppercase not-italic tracking-[0.12em] text-[var(--royal-blue-light)]">
             Type
@@ -83,7 +85,7 @@ export const WeaponCard = ({
           {weapon.subclassAccessLabel}
         </span>
       </div>
-      <div className="flex w-full flex-col gap-2 md:flex-row md:gap-[10px]">
+      <div className="flex w-full flex-col gap-2 md:flex-row md:gap-3">
         <Button
           active={isLeftSelected}
           activeTone="left"

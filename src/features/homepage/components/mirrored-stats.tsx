@@ -56,11 +56,6 @@ export const MirroredStats = ({
               <span className="mr-auto block w-10 flex-none text-left text-[0.72rem] md:hidden">
                 {formatMetricValue(row.leftValue)}
               </span>
-              <div className="order-3 w-full flex-none text-center md:order-none md:w-[90px]">
-                <span className="font-ornate text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-[var(--royal-blue)]">
-                  {row.label}
-                </span>
-              </div>
               <div className="order-1 flex flex-1 justify-end pr-0 md:order-none md:pr-2">
                 <StatBar
                   className="w-full"
@@ -68,6 +63,11 @@ export const MirroredStats = ({
                   percent={row.leftPercent}
                   state={row.leftState}
                 />
+              </div>
+              <div className="order-3 w-full flex-none text-center md:order-none md:w-[90px]">
+                <span className="font-ornate text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-[var(--royal-blue)]">
+                  {row.label}
+                </span>
               </div>
               <div className="order-2 flex flex-1 justify-start pl-0 md:order-none md:pl-2">
                 <StatBar className="w-full" percent={row.rightPercent} state={row.rightState} />
