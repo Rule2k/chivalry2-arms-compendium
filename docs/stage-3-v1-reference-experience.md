@@ -2,9 +2,9 @@
 
 ## Current Stage
 
-Stage 3 is no longer at the planning-only phase.
+Stage 3 is complete.
 
-The repository now contains the first real implementation of the public reference experience on top of the normalized V1 catalog.
+The repository contains the launched homepage-first V1 of the public reference experience on top of the normalized V1 catalog.
 
 ## Exact Stage Objective
 
@@ -17,9 +17,9 @@ This stage should prove that the project can present weapon information in a way
 Stage 3 is complete when all of the following are true:
 
 - the main page is usable as a real reference surface, not only a prototype translation;
-- users can browse the full curated catalog with the intended V1 filter and sorting surface;
+- users can browse the full curated catalog with the launch filter and sorting surface;
 - users can compare two weapons in place without friction;
-- the product exposes a detailed inspection surface that justifies the normalized contract work from Stage 2;
+- the normalized contract work from Stage 2 is successfully expressed through a useful public browsing experience, even if deeper inspection remains deferred;
 - the implementation is stable enough to move into deployment and validation.
 
 ## What Is Now Implemented
@@ -36,21 +36,20 @@ The repository now includes:
 
 ## Stage 3 Progress Assessment
 
-The core homepage foundation is now in place.
+The core homepage foundation is in place and has proven sufficient for an initial public launch.
 
-This means the project has moved past scaffold work and into real product completion work.
+This means the project moved past scaffold work and into a real product release.
 The repository can already render the full generated catalog and exercise the main browsing loop on desktop and narrow mobile layouts.
 
-Stage 3 is still open because the full V1 reference surface is not complete yet.
+Stage 3 should now be treated as closed, with Stage 4 handling live validation and any post-launch refinement decisions.
 
-## Remaining Work To Close Stage 3
+## What Moves Forward Into Stage 4
 
-The highest-value remaining items are:
+The highest-value follow-on items are now:
 
-- add the remaining V1 browsing controls that are still missing from the implemented homepage surface, especially weapon-type filtering;
-- build the detailed weapon inspection surface on top of the normalized attack data rather than stopping at summary cards and comparison rows;
+- validate the live VPS deployment and redeploy workflow under real operating conditions;
 - strengthen regression coverage around the real catalog data and interaction edge cases;
-- validate release readiness through build, test, and deployment-oriented hardening once the missing product surface is in place.
+- use real product feedback to decide whether missing surfaces such as deeper inspection or broader filtering deserve near-term scope.
 
 ## Repository Role Of This Stage
 
@@ -60,4 +59,4 @@ The Stage 3 implementation keeps the Stage 2 contract boundary intact:
 - homepage interactions operate on product-facing view models derived from the contract;
 - the generated catalog remains a stable local input for development and regression testing.
 
-That direction is now considered validated enough to continue Stage 3 implementation rather than revisiting the data model again.
+That direction is now considered validated enough to move into deployment validation rather than revisiting the data model again.

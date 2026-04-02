@@ -18,7 +18,7 @@
 
 ## Current Stage
 
-- Stage 3: V1 Reference Experience
+- Stage 4: Public Deployment and Validation
 
 ## Current Technical Direction
 
@@ -29,3 +29,4 @@
 - Source ingestion: `src/domain/weapons/source/chivalry2-source.ts`
 - Catalog generation script: `scripts/build-weapons-catalog.ts`
 - Validated homepage prototype reference: `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`
+- Deployment runtime baseline: `Dockerfile` and `compose.yaml`

@@ -20,9 +20,9 @@ This file is not:
 
 ### Working Name
 
-TBD.
+Chivalry 2 Arms Compendium.
 
-Current repository name: `chivalry`.
+Current repository name: `chivalry2-arms-compendium`.
 
 ### One-Sentence Summary
 
@@ -63,10 +63,9 @@ Provide a reference site that players can actually use comfortably when comparin
 - front-end-only website;
 - public weapon reference built from the current community library;
 - all weapons shown by default on the main page;
-- filtering by subclass, weapon name, and weapon type;
+- filtering by class, subclass, and weapon name;
 - sorting by core summary metrics such as damage, range, and speed;
-- simple weapon component for browsing;
-- detailed weapon component for deep inspection;
+- codex-style weapon cards for browsing;
 - in-place comparison mode between two weapons;
 - derived metrics when they can be computed reliably from source data.
 
@@ -76,6 +75,8 @@ Provide a reference site that players can actually use comfortably when comparin
 - advanced analytics;
 - back-office;
 - admin accounts;
+- dedicated weapon-detail route at launch;
+- extra browsing controls that are not yet justified by live product use;
 - product complexity that hurts clarity.
 
 ### Catalog Rules For V1
@@ -142,14 +143,13 @@ That means:
 
 ### Core Surfaces
 
-The product has two display surfaces and one shared interaction mode:
-- simple weapon component;
-- detailed weapon component;
+The live V1 has one primary display surface and one shared interaction mode:
+- homepage weapon card surface;
 - comparison mode.
 
 Comparison mode is not a dedicated page.
 
-### Simple Weapon Component
+### Homepage Weapon Card Surface
 
 Purpose:
 Fast scanning and sorting on the main page.
@@ -168,10 +168,13 @@ Metric rules:
 - `avgRange` = average of `slash.range`, `overhead.range`, and `stab.range`;
 - `avgSpeed` = average windup across `slash`, `overhead`, and `stab`, using both light and heavy variants.
 
-### Detailed Weapon Component
+### Deferred Detailed Inspection Surface
 
-Purpose:
-Deep inspection of a single weapon without losing readability.
+The normalized contract still carries enough attack data to support a future detailed inspection surface.
+
+That deeper surface is no longer required for the launch definition of V1.
+
+If it becomes justified by live feedback, it should preserve the same readability goals and expose:
 
 Identity and access:
 - `name`;
@@ -282,19 +285,18 @@ Build the front-end-only weapon reference experience.
 
 Output:
 - main page browsing experience;
-- simple weapon component;
-- detailed weapon component;
+- homepage weapon card surface;
 - comparison mode;
 - working filters and sorting.
 
 Exit condition:
-The site is usable as a real reference product.
+The site is usable as a real reference product through its homepage-first browsing and comparison surface.
 
 Master plan checkpoint:
 Return to this file when the front-end experience is usable, then decide whether the immediate next plan is stabilization, deployment, or both.
 
 Status:
-Stage 3 is now in active implementation. The repository contains a real Next.js homepage experience wired to the normalized V1 catalog, but the full V1 reference surface is not complete yet.
+Stage 3 is complete. The repository contains a real Next.js homepage experience wired to the normalized V1 catalog, and that intentionally narrowed homepage-first surface was sufficient to launch the initial V1 on the VPS.
 
 ### Stage 4. Public Deployment and Validation
 
@@ -311,6 +313,9 @@ The project is publicly accessible and stable enough to keep iterating.
 
 Master plan checkpoint:
 Return to this file after deployment and initial validation, then decide whether to continue refining V1 or move into longer-term data management work.
+
+Status:
+Stage 4 is now active. The initial V1 is deployed on the VPS, and the project has moved from pre-launch build-out into post-launch validation, operational hardening, and product feedback collection.
 
 ### Stage 5. Data Management Evolution
 
@@ -356,7 +361,7 @@ Includes:
 - browsing flows;
 - main-page-first experience;
 - filters and sorting;
-- simple and detailed weapon components;
+- homepage card presentation;
 - in-place comparison behavior.
 
 ### Workstream: Weapon Reference Product
@@ -367,7 +372,7 @@ Define the public-facing weapon catalog, visible stat model, and comparison beha
 Includes:
 - V1 catalog curation;
 - summary metrics;
-- detailed stat presentation;
+- decisions about whether deeper stat presentation is needed after launch;
 - decisions about what to show, simplify, or hide.
 
 ### Workstream: Data Source and Normalization
@@ -403,7 +408,8 @@ Implementation order:
 Parallelism rules:
 - UI direction and source-data exploration can progress together early;
 - back-office thinking belongs in the master plan now, but not in immediate V1 implementation;
-- deployment preparation can start before V1 is perfect, but only after the reference experience is clearly useful.
+- deployment preparation can start before V1 is perfect, but only after the reference experience is clearly useful;
+- once the site is live, further product scope should be driven by real usage and operational pain rather than assumed completeness.
 
 ## 10. Risks, Unknowns, and Decision Gates
 
@@ -416,10 +422,9 @@ Parallelism rules:
 
 ### Current Unknowns
 
-- final project name;
-- final shape of the detailed weapon-inspection surface;
+- final shape of any post-launch detailed weapon-inspection surface;
 - best long-term update workflow for weapon data;
-- exact stabilization scope required before public deployment;
+- what real users most need beyond the homepage-first V1;
 - exact point at which a database becomes necessary;
 - order of future expansions after weapons.
 
@@ -433,10 +438,12 @@ Parallelism rules:
 ## 11. Structural Decisions
 
 Validated decisions:
+- the working product name is "Chivalry 2 Arms Compendium";
 - V1 is front-end only;
 - future database-backed data management is part of the long-term plan;
 - the main page is the primary product surface;
 - comparison happens in-place, not on a separate page;
+- the initial live V1 is intentionally homepage-first and does not include a separate weapon-detail route;
 - subclass access is the primary availability signal in the UI;
 - the project uses a normalized internal product model instead of the raw library schema;
 - the normalized weapon contract acts as the source of truth for product-facing weapon data, and TypeScript types should be derived from that contract rather than duplicated by hand;
@@ -444,7 +451,8 @@ Validated decisions:
 - the current catalog build script is the first form of the ingestion pipeline and may later evolve into a database import, sync, or validation script rather than being discarded;
 - homepage summary metrics stay simplified and are derived from core attack data;
 - homepage design direction is validated: `prototypes/homepage-designs-v2/71-arms-compendium-codex.html` is the chosen reference prototype;
-- the Stage 3 front-end implementation is now anchored on a Next.js App Router application that consumes the generated normalized catalog directly and keeps homepage comparison and filtering as client-side interactions.
+- the Stage 3 front-end implementation is anchored on a Next.js App Router application that consumes the generated normalized catalog directly and keeps homepage comparison and filtering as client-side interactions;
+- the live deployment baseline is Docker-based and currently runs on the VPS through the repository's container runtime files.
 
 ### Homepage Design Direction
 
@@ -455,7 +463,7 @@ The chosen design emerged from 7 waves of iterative prototyping (71 designs tota
 - **Weapon cards**: Codex-page entries in a 2-column grid — centered weapon name, damage type badge, gold rule separator, full-width stat bars, meta info (type/class), and Set Left / Set Right comparison buttons.
 - **Comparison mode**: Mirrored stat bars (left grows right-to-left, right grows left-to-right), VS shield badge, winner gets gold bar + green value, Speed stat uses lower-is-better logic.
 - **Selection states**: Neutral gold (left) and royal blue (right) — no green/red highlighting on weapon cards or buttons.
-- **Controls**: Search, damage type filter (All/Cut/Chop/Blunt), sort by stat.
+- **Controls**: Search, class/subclass filtering, and sort by stat.
 - **Footer**: Minimal ornamental rule with subtle text.
 
 ## 12. Progress and Next Planning Candidates
@@ -464,30 +472,30 @@ The chosen design emerged from 7 waves of iterative prototyping (71 designs tota
 
 - Stage 1. Strategic framing: complete
 - Stage 2. Source normalization and product contract: complete
-- Stage 3. V1 reference experience: current stage — homepage implementation is underway, the catalog-driven browsing and comparison foundation exists, but the full V1 reference surface is not complete yet
-- Stage 4. Public deployment and validation: pending
+- Stage 3. V1 reference experience: complete — the homepage-first reference experience is implemented and deployed as the initial live V1
+- Stage 4. Public deployment and validation: current stage — the VPS deployment is live and now needs operating confidence, feedback, and iteration discipline
 - Stage 5. Data management evolution: pending
 - Stage 6. Expansion: pending
 
 ### Next Planning Candidates
 
-- complete the remaining V1 product surfaces, especially the detailed weapon inspection experience.
-- finish the full browsing contract for V1, especially any missing filter dimensions beyond the current name and class/subclass controls.
-- stabilize the Stage 3 implementation with stronger regression coverage and deployment-readiness checks.
+- validate live stability and the redeploy workflow on the VPS.
+- decide whether post-launch product feedback justifies a deeper inspection surface or broader filtering.
+- define the next sustainable data refresh workflow from source package to deployed catalog.
 
 ## 13. Session Reset Summary
 
 ### Current State
 
-Stages 1 and 2 are complete. Stage 3 is the active strategic stage and is now materially in progress in the repository: there is a real Next.js homepage wired to the normalized V1 catalog, with search, class/subclass browsing, sorting, and in-place comparison built on top of the validated prototype direction. The chosen prototype remains `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`, and the next step is to complete the missing V1 reference surfaces and stabilize the experience.
+Stages 1 through 3 are complete. The project now has a live VPS deployment of the homepage-first V1: a real Next.js reference site wired to the normalized catalog, with search, class/subclass browsing, sorting, and in-place comparison built on top of the validated prototype direction. The chosen prototype remains `prototypes/homepage-designs-v2/71-arms-compendium-codex.html`, but the current strategic question is no longer how to reach launch. It is how to validate and evolve the live product without adding premature scope.
 
 ### Current Focus
 
-Complete and harden the V1 front-end reference experience: keep the homepage implementation aligned with the normalized catalog, add the remaining product surface area still missing from V1, and raise test and deployment confidence until the site is usable as a real public reference.
+Run Stage 4 well: keep the live VPS deployment stable, tighten redeploy confidence, observe what real use reveals about missing product surface area, and only then decide whether the next step is V1 refinement or longer-term data-management planning.
 
 ### Next High-Level Question
 
-What is the minimum remaining Stage 3 scope required to turn the current homepage foundation into a fully usable V1 reference product?
+What does the live VPS deployment reveal as the highest-value next move: operational hardening, targeted V1.1 product refinement, or longer-term data-management planning?
 
 ### Last Updated
 
