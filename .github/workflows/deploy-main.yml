@@ -49,25 +49,30 @@ jobs:
       - name: Configure SSH
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
           VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
         run: |
           install -m 700 -d ~/.ssh
-          printf '%s\n' "$VPS_SSH_KEY" > ~/.ssh/id_ed25519
+          printf '%s\n' "$VPS_SSH_KEY" | tr -d '\r' > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
+          cat <<EOF > ~/.ssh/config
+          Host chivalry2-vps
+            HostName ${VPS_HOST}
+            User ${VPS_USER}
+            IdentityFile ~/.ssh/id_ed25519
+            IdentitiesOnly yes
+            StrictHostKeyChecking yes
+          EOF
+          chmod 600 ~/.ssh/config
 
       - name: Ensure Deploy Directory Exists
-        env:
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
-        run: ssh "${VPS_USER}@${VPS_HOST}" "mkdir -p '${DEPLOY_PATH}'"
+        run: ssh chivalry2-vps "mkdir -p '${DEPLOY_PATH}'"
 
       - name: Sync Repository To VPS
-        env:
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
         run: |
           rsync -az --delete \
+            -e "ssh -F ~/.ssh/config" \
             --exclude '.git' \
             --exclude 'node_modules' \
             --exclude '.next' \
@@ -78,14 +83,11 @@ jobs:
             --exclude 'playwright-report' \
             --exclude 'test-results' \
             --exclude '*.tsbuildinfo' \
-            ./ "${VPS_USER}@${VPS_HOST}:${DEPLOY_PATH}/"
+            ./ "chivalry2-vps:${DEPLOY_PATH}/"
 
       - name: Deploy On VPS With Docker Compose
-        env:
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
         run: |
-          ssh "${VPS_USER}@${VPS_HOST}" "
+          ssh chivalry2-vps "
             set -e
             cd '${DEPLOY_PATH}'
             docker compose down --remove-orphans || true
